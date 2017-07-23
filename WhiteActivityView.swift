@@ -12,8 +12,7 @@ import UIKit
 class WhiteActivityView: UIView {
 
     override func draw(_ rect: CGRect) {
-        TestWindowDark.drawCanvas1(frame: rect, resizing: .center)
-        //SelfDesignedUI.drawWindowLight(frame: rect, resizing: .center)
+        SelfDesignedUI.drawWindowLight(frame: rect, resizing: .center)
     }
 
 }

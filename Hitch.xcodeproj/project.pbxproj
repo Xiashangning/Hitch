@@ -10,7 +10,6 @@
 		386520B5D9752DD463758155 /* libPods-Hitch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE07EE5180C4CB9D3FA9B7AA /* libPods-Hitch.a */; };
 		BD25F3CE1F21E43E000B5487 /* WhiteActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD25F3CD1F21E43E000B5487 /* WhiteActivityView.swift */; };
 		BD25F3D01F21E65F000B5487 /* SFProDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BD25F3CF1F21E65F000B5487 /* SFProDisplay-Bold.otf */; };
-		BD25F3D21F21EACA000B5487 /* TestWindowDark.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD25F3D11F21EACA000B5487 /* TestWindowDark.swift */; };
 		BD44B1D41F1F5268008324C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44B1D31F1F5268008324C2 /* AppDelegate.swift */; };
 		BD44B1D61F1F5268008324C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44B1D51F1F5268008324C2 /* ViewController.swift */; };
 		BD44B1D91F1F5268008324C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD44B1D71F1F5268008324C2 /* Main.storyboard */; };
@@ -25,7 +24,6 @@
 		97B6382E04D54A7FDE38AFE4 /* Pods-Hitch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hitch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hitch/Pods-Hitch.debug.xcconfig"; sourceTree = "<group>"; };
 		BD25F3CD1F21E43E000B5487 /* WhiteActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteActivityView.swift; sourceTree = "<group>"; };
 		BD25F3CF1F21E65F000B5487 /* SFProDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.otf"; sourceTree = "<group>"; };
-		BD25F3D11F21EACA000B5487 /* TestWindowDark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestWindowDark.swift; sourceTree = "<group>"; };
 		BD44B1D01F1F5268008324C2 /* Hitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD44B1D31F1F5268008324C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD44B1D51F1F5268008324C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 		BD44B2011F21CBE2008324C2 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				BD25F3D11F21EACA000B5487 /* TestWindowDark.swift */,
 				BD25F3CF1F21E65F000B5487 /* SFProDisplay-Bold.otf */,
 				BD44B2021F21CD72008324C2 /* SelfDesignedUI.swift */,
 				BD44B2041F21D4BA008324C2 /* BlackButton.swift */,
@@ -251,7 +248,6 @@
 				BD44B1D41F1F5268008324C2 /* AppDelegate.swift in Sources */,
 				BD44B2031F21CD72008324C2 /* SelfDesignedUI.swift in Sources */,
 				BD44B2071F21DACF008324C2 /* WhiteButton.swift in Sources */,
-				BD25F3D21F21EACA000B5487 /* TestWindowDark.swift in Sources */,
 				BD25F3CE1F21E43E000B5487 /* WhiteActivityView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
