@@ -16,7 +16,7 @@ class ViewController: UIViewController,MAMapViewDelegate {
         AMapServices.shared().apiKey = "8e66eff3b2c3569745b18d667680a7f2"
         let map = MAMapView(frame: self.view.bounds)
         map.delegate = self
-        self.view.addSubview(map)
+        
     }
 
     override func didReceiveMemoryWarning() {
