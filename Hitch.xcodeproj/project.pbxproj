@@ -8,24 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		386520B5D9752DD463758155 /* libPods-Hitch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE07EE5180C4CB9D3FA9B7AA /* libPods-Hitch.a */; };
-		BD25F3CE1F21E43E000B5487 /* WhiteActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD25F3CD1F21E43E000B5487 /* WhiteActivityView.swift */; };
+		7165762E1F3EE104002A7CDB /* LOGIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7165762D1F3EE104002A7CDB /* LOGIN.swift */; };
+		716576321F3EE40D002A7CDB /* UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716576311F3EE40D002A7CDB /* UIKit.swift */; };
+		716576341F3EE588002A7CDB /* TakeATour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716576331F3EE588002A7CDB /* TakeATour.swift */; };
+		716576361F3EE5DF002A7CDB /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716576351F3EE5DF002A7CDB /* Register.swift */; };
+		716576381F3EE686002A7CDB /* CANCEL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716576371F3EE686002A7CDB /* CANCEL.swift */; };
+		71BEEB781F3EEB5C000C0F15 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BEEB771F3EEB5C000C0F15 /* User.swift */; };
+		71BEEB7A1F3EEBC4000C0F15 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BEEB791F3EEBC4000C0F15 /* Event.swift */; };
 		BD25F3D01F21E65F000B5487 /* SFProDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BD25F3CF1F21E65F000B5487 /* SFProDisplay-Bold.otf */; };
-		BD25F3D21F21EACA000B5487 /* TestWindowDark.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD25F3D11F21EACA000B5487 /* TestWindowDark.swift */; };
 		BD44B1D41F1F5268008324C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44B1D31F1F5268008324C2 /* AppDelegate.swift */; };
 		BD44B1D61F1F5268008324C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44B1D51F1F5268008324C2 /* ViewController.swift */; };
 		BD44B1D91F1F5268008324C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD44B1D71F1F5268008324C2 /* Main.storyboard */; };
 		BD44B1DB1F1F5268008324C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD44B1DA1F1F5268008324C2 /* Assets.xcassets */; };
 		BD44B1DE1F1F5268008324C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD44B1DC1F1F5268008324C2 /* LaunchScreen.storyboard */; };
-		BD44B2031F21CD72008324C2 /* SelfDesignedUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44B2021F21CD72008324C2 /* SelfDesignedUI.swift */; };
 		BD44B2051F21D4BA008324C2 /* BlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44B2041F21D4BA008324C2 /* BlackButton.swift */; };
 		BD44B2071F21DACF008324C2 /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44B2061F21DACF008324C2 /* WhiteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7165762D1F3EE104002A7CDB /* LOGIN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LOGIN.swift; sourceTree = "<group>"; };
+		716576311F3EE40D002A7CDB /* UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKit.swift; sourceTree = "<group>"; };
+		716576331F3EE588002A7CDB /* TakeATour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeATour.swift; sourceTree = "<group>"; };
+		716576351F3EE5DF002A7CDB /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		716576371F3EE686002A7CDB /* CANCEL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CANCEL.swift; sourceTree = "<group>"; };
+		71BEEB771F3EEB5C000C0F15 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		71BEEB791F3EEBC4000C0F15 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		97B6382E04D54A7FDE38AFE4 /* Pods-Hitch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hitch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hitch/Pods-Hitch.debug.xcconfig"; sourceTree = "<group>"; };
-		BD25F3CD1F21E43E000B5487 /* WhiteActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteActivityView.swift; sourceTree = "<group>"; };
 		BD25F3CF1F21E65F000B5487 /* SFProDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.otf"; sourceTree = "<group>"; };
-		BD25F3D11F21EACA000B5487 /* TestWindowDark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestWindowDark.swift; sourceTree = "<group>"; };
 		BD44B1D01F1F5268008324C2 /* Hitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD44B1D31F1F5268008324C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD44B1D51F1F5268008324C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,7 +45,6 @@
 		BD44B1E61F1F52EA008324C2 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAMapKit.framework; path = ../../Downloads/MAMapKit.framework; sourceTree = "<group>"; };
 		BD44B1E81F1F52FB008324C2 /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapFoundationKit.framework; path = ../../Downloads/AMapFoundationKit.framework; sourceTree = "<group>"; };
 		BD44B1EB1F209728008324C2 /* Hitch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hitch-Bridging-Header.h"; sourceTree = "<group>"; };
-		BD44B2021F21CD72008324C2 /* SelfDesignedUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfDesignedUI.swift; sourceTree = "<group>"; };
 		BD44B2041F21D4BA008324C2 /* BlackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackButton.swift; sourceTree = "<group>"; };
 		BD44B2061F21DACF008324C2 /* WhiteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
 		CBD1AAC53FBF28FEB3E7D873 /* Pods-Hitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hitch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hitch/Pods-Hitch.release.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +101,8 @@
 				BD44B1DC1F1F5268008324C2 /* LaunchScreen.storyboard */,
 				BD44B1DF1F1F5268008324C2 /* Info.plist */,
 				BD44B1EB1F209728008324C2 /* Hitch-Bridging-Header.h */,
+				71BEEB771F3EEB5C000C0F15 /* User.swift */,
+				71BEEB791F3EEBC4000C0F15 /* Event.swift */,
 			);
 			path = Hitch;
 			sourceTree = "<group>";
@@ -110,12 +120,14 @@
 		BD44B2011F21CBE2008324C2 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				BD25F3D11F21EACA000B5487 /* TestWindowDark.swift */,
 				BD25F3CF1F21E65F000B5487 /* SFProDisplay-Bold.otf */,
-				BD44B2021F21CD72008324C2 /* SelfDesignedUI.swift */,
+				716576311F3EE40D002A7CDB /* UIKit.swift */,
 				BD44B2041F21D4BA008324C2 /* BlackButton.swift */,
 				BD44B2061F21DACF008324C2 /* WhiteButton.swift */,
-				BD25F3CD1F21E43E000B5487 /* WhiteActivityView.swift */,
+				7165762D1F3EE104002A7CDB /* LOGIN.swift */,
+				716576331F3EE588002A7CDB /* TakeATour.swift */,
+				716576351F3EE5DF002A7CDB /* Register.swift */,
+				716576371F3EE686002A7CDB /* CANCEL.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -247,12 +259,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD44B1D61F1F5268008324C2 /* ViewController.swift in Sources */,
+				71BEEB7A1F3EEBC4000C0F15 /* Event.swift in Sources */,
+				716576341F3EE588002A7CDB /* TakeATour.swift in Sources */,
 				BD44B2051F21D4BA008324C2 /* BlackButton.swift in Sources */,
+				7165762E1F3EE104002A7CDB /* LOGIN.swift in Sources */,
+				716576381F3EE686002A7CDB /* CANCEL.swift in Sources */,
+				716576321F3EE40D002A7CDB /* UIKit.swift in Sources */,
 				BD44B1D41F1F5268008324C2 /* AppDelegate.swift in Sources */,
-				BD44B2031F21CD72008324C2 /* SelfDesignedUI.swift in Sources */,
+				716576361F3EE5DF002A7CDB /* Register.swift in Sources */,
+				71BEEB781F3EEB5C000C0F15 /* User.swift in Sources */,
 				BD44B2071F21DACF008324C2 /* WhiteButton.swift in Sources */,
-				BD25F3D21F21EACA000B5487 /* TestWindowDark.swift in Sources */,
-				BD25F3CE1F21E43E000B5487 /* WhiteActivityView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
