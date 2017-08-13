@@ -14,37 +14,6 @@ import UIKit
 class SelfDesignedUI: NSObject {
     
     
-    //MARK: - Canvas Drawings
-    
-    /// Page 1
-    
-    class func drawPage1() {
-        /// Button-Black
-        // Warning: New symbols are not supported.
-        /// Button-Black-Pressed
-        // Warning: New symbols are not supported.
-        /// Button-White
-        // Warning: New symbols are not supported.
-        /// Button-White-Pressed
-        // Warning: New symbols are not supported.
-        /// Window-Light
-        // Warning: New symbols are not supported.
-        /// Register
-        // Warning: New symbols are not supported.
-        /// Filter
-        // Warning: New symbols are not supported.
-        /// Cancel
-        // Warning: New symbols are not supported.
-        /// LOGIN
-        // Warning: New symbols are not supported.
-        /// TAKETHETOUR
-        // Warning: New symbols are not supported.
-        /// Window-Dark
-        // Warning: New symbols are not supported.
-        /// Window-Light
-        // Warning: New symbols are not supported.
-    }
-    
     /// Symbols
     
     class func drawTAKETHETOUR(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 211, height: 36), resizing: ResizingBehavior = .aspectFit) {
