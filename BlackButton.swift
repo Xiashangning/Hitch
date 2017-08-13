@@ -12,8 +12,8 @@ import UIKit
 class BlackButton: UIButton {
 
     private func myInit() {
-        self.setImage(SelfDesignedUI.imageOfButtonBlack(), for: .normal)
-        self.setImage(SelfDesignedUI.imageOfButtonBlackPressed(), for: .focused)
+        self.setImage(UIKit.imageOfButtonBlack(), for: .normal)
+        self.setImage(UIKit.imageOfButtonBlackPressed(), for: .focused)
     }
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -26,6 +26,6 @@ class BlackButton: UIButton {
     }
     
     override func draw(_ rect: CGRect) {
-        SelfDesignedUI.drawButtonBlack(frame: self.bounds, resizing: .center)
+        UIKit.drawButtonBlack(frame: self.bounds, resizing: .center)
     }
 }
