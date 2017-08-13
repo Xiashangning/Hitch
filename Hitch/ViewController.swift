@@ -15,7 +15,7 @@ class ViewController: UIViewController,MAMapViewDelegate {
     @IBOutlet weak var profile: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loading the view, typically from a nibhello
         AMapServices.shared().apiKey = "8e66eff3b2c3569745b18d667680a7f2"
         let map = MAMapView(frame: mainView.bounds)
         map.delegate = self
