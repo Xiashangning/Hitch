@@ -9,14 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController,MAMapViewDelegate {
-    
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var mainView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         AMapServices.shared().apiKey = "8e66eff3b2c3569745b18d667680a7f2"
-        let map = MAMapView(frame: self.view.bounds)
+        let map = MAMapView(frame: mainView.bounds)
         map.delegate = self
-        self.view.addSubview(map)
+        mainView.addSubview(map)
     }
 
     override func didReceiveMemoryWarning() {
