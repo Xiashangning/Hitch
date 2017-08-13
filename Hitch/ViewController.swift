@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController,MAMapViewDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var mode: UIButton!
+    @IBOutlet weak var profile: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -18,8 +20,15 @@ class ViewController: UIViewController,MAMapViewDelegate {
         let map = MAMapView(frame: mainView.bounds)
         map.delegate = self
         mainView.addSubview(map)
+        mode.setImage(UIImage(named: "map_2x"), for: .normal)
+        mode.setImage(UIImage(named: "mostviewed_2x"), for: .selected)
+        mode.isSelected = false
+        profile.setImage(UIImage(named: "contacts_2x"), for: .normal)
     }
 
+    @IBAction func changeMode(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

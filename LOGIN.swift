@@ -27,6 +27,6 @@ class LOGIN: UIButton {
     }
     
     override func draw(_ rect: CGRect) {
-        UI.drawLOGIN(frame: self.bounds, resizing: .center)
+        UI.drawLOGIN(frame: self.bounds, resizing: .aspectFit)
     }
 }

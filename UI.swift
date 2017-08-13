@@ -13,8 +13,7 @@ import UIKit
 
 class UI: NSObject {
     
-    
-    class func drawCancel(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 18), resizing: ResizingBehavior = .aspectFit) {
+    class func drawCancelPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 18), resizing: ResizingBehavior = .aspectFit) {
         /// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         let baseTransform = context.userSpaceToDeviceSpaceTransform.inverted()
@@ -28,18 +27,18 @@ class UI: NSObject {
         /// Group
         do {
             context.saveGState()
+            context.translateBy(x: 0, y: 1)
             
             /// Group 4
             do {
                 context.saveGState()
-                context.translateBy(x: 0, y: 1)
                 
                 /// Group 2
                 do {
                     context.saveGState()
                     
                     /// Combined Shape
-                    let combinedShape = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 51.2, height: 15.89), cornerRadius: 13)
+                    let combinedShape = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 61.2, height: 15.89), cornerRadius: 13)
                     context.saveGState()
                     context.translateBy(x: 0.66, y: 0.69)
                     context.saveGState()
@@ -47,11 +46,11 @@ class UI: NSObject {
                     context.addPath(combinedShape.cgPath)
                     context.addRect(combinedShape.bounds.insetBy(dx: -46, dy: -46))
                     context.clip(using: .evenOdd)
-                    context.translateBy(x: -128.2, y: 0)
+                    context.translateBy(x: -138.2, y: 0)
                     do {
                         let baseZero = context.convertToDeviceSpace(CGPoint.zero).applying(baseTransform)
                         let baseOne = context.convertToDeviceSpace(CGPoint(x: 1, y: 1)).applying(baseTransform)
-                        let baseOffset = context.convertToDeviceSpace(CGPoint(x: 128.2, y: 0)).applying(baseTransform)
+                        let baseOffset = context.convertToDeviceSpace(CGPoint(x: 138.2, y: 0)).applying(baseTransform)
                         let shadowOffset = CGSize(width: baseOffset.x - baseZero.x, height: baseOffset.y - baseZero.y)
                         let shadowBlur: CGFloat = 16 * min(baseOne.x - baseZero.x, baseOne.y - baseZero.y)
                         context.setShadow(offset: shadowOffset, blur: shadowBlur, color: UIColor(white: 0.559, alpha: 0.23).cgColor)
@@ -83,7 +82,418 @@ class UI: NSObject {
                     // End Combined Shape (Outline Mask)
                     
                     /// Combined Shape
-                    let combinedShape2 = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 67.14, height: 20.02), cornerRadius: 13)
+                    let combinedShape2 = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 77.14, height: 20.02), cornerRadius: 13)
+                    context.saveGState()
+                    context.translateBy(x: -7, y: -3.44)
+                    UIColor(hue: 0.791, saturation: 0.012, brightness: 0.398, alpha: 1).setFill()
+                    combinedShape2.fill()
+                    context.restoreGState()
+                    
+                    /// Combined Shape (Outline Mask)
+                    context.saveGState()
+                    combinedShape2.apply(CGAffineTransform(translationX: -7, y: -3.44))
+                    combinedShape2.addClip()
+                    
+                    // Empty.
+                    
+                    context.restoreGState()
+                    // End Combined Shape (Outline Mask)
+                    
+                    context.restoreGState()
+                }
+                
+                context.restoreGState()
+            }
+            
+            context.restoreGState()
+        }
+        
+        context.restoreGState()
+    }
+    
+    class func drawLOGINPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 292, height: 54), resizing: ResizingBehavior = .aspectFit) {
+        /// General Declarations
+        let context = UIGraphicsGetCurrentContext()!
+        
+        /// Resize to Target Frame
+        context.saveGState()
+        let resizedFrame = resizing.apply(rect: CGRect(x: 0, y: 0, width: 292, height: 54), target: targetFrame)
+        context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
+        context.scaleBy(x: resizedFrame.width / 292, y: resizedFrame.height / 54)
+        let resizedShadowScale: CGFloat = min(resizedFrame.width / 292, resizedFrame.height / 54)
+        
+        /// Group 8
+        do {
+            context.saveGState()
+            
+            /// Group 3
+            do {
+                context.saveGState()
+                
+                /// Group 3
+                context.saveGState()
+                context.setAlpha(0.66)
+                context.beginTransparencyLayer(auxiliaryInfo: nil)
+                do {
+                    context.setShadow(
+                        offset: CGSize(width: 0 * resizedShadowScale, height: 2 * resizedShadowScale),
+                        blur: 9 * resizedShadowScale,
+                        color: UIColor(white: 0, alpha: 0.5).cgColor)
+                    context.beginTransparencyLayer(auxiliaryInfo: nil)
+                    do {
+                        context.translateBy(x: 1.27, y: 0.57)
+                        
+                        /// Oval 2
+                        let oval2 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 52.41, height: 52.41))
+                        context.saveGState()
+                        UIColor.white.setFill()
+                        oval2.fill()
+                        context.restoreGState()
+                        
+                        /// Oval 2
+                        let oval3 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 52.41, height: 52.41))
+                        context.saveGState()
+                        context.translateBy(x: 236.32, y: 0)
+                        UIColor.white.setFill()
+                        oval3.fill()
+                        context.restoreGState()
+                        
+                        /// Rectangle
+                        let rectangle = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 235.83, height: 52.41))
+                        context.saveGState()
+                        context.translateBy(x: 26.2, y: 0)
+                        UIColor.white.setFill()
+                        rectangle.fill()
+                        context.restoreGState()
+                    }
+                    context.endTransparencyLayer()
+                }
+                context.endTransparencyLayer()
+                context.restoreGState()
+                
+                /// Oval 2
+                let oval4 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 53, height: 53))
+                context.saveGState()
+                context.translateBy(x: 0, y: 1)
+                UIColor(white: 0.149, alpha: 1).setFill()
+                oval4.fill()
+                context.restoreGState()
+                
+                /// Oval 2
+                let oval5 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 53, height: 53))
+                context.saveGState()
+                context.translateBy(x: 239, y: 1)
+                UIColor(white: 0.149, alpha: 1).setFill()
+                oval5.fill()
+                context.restoreGState()
+                
+                /// Rectangle
+                let rectangle2 = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 238.5, height: 53))
+                context.saveGState()
+                context.translateBy(x: 26.5, y: 1)
+                UIColor(white: 0.148, alpha: 1).setFill()
+                rectangle2.fill()
+                context.restoreGState()
+                
+                context.restoreGState()
+            }
+            
+            /// 登录
+            let layer = NSMutableAttributedString(string: "登录")
+            layer.addAttribute(NSFontAttributeName, value: UIFont(name: "PingFangSC-Semibold", size: 20)!, range: NSRange(location: 0, length: layer.length))
+            layer.addAttribute(NSForegroundColorAttributeName, value: UIColor(hue: 1, saturation: 0.004, brightness: 0.633, alpha: 1), range: NSRange(location: 0, length: layer.length))
+            layer.addAttribute(NSKernAttributeName, value: 0.24, range: NSRange(location: 0, length: layer.length))
+            context.saveGState()
+            layer.draw(at: CGPoint(x: 126, y: 12))
+            context.restoreGState()
+            
+            /// Line
+            let line = UIBezierPath()
+            line.move(to: CGPoint(x: -0.5, y: -0.5))
+            line.addLine(to: CGPoint(x: 1, y: 1))
+            context.saveGState()
+            context.translateBy(x: 149, y: 31)
+            line.lineCapStyle = .square
+            line.lineWidth = 1
+            UIColor(white: 0.592, alpha: 1).setStroke()
+            line.stroke()
+            context.restoreGState()
+            
+            context.restoreGState()
+        }
+        
+        context.restoreGState()
+    }
+    
+    class func drawTAKEATOUR(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 292, height: 54), resizing: ResizingBehavior = .aspectFit) {
+        /// General Declarations
+        let context = UIGraphicsGetCurrentContext()!
+        
+        /// Resize to Target Frame
+        context.saveGState()
+        let resizedFrame = resizing.apply(rect: CGRect(x: 0, y: 0, width: 292, height: 54), target: targetFrame)
+        context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
+        context.scaleBy(x: resizedFrame.width / 292, y: resizedFrame.height / 54)
+        let resizedShadowScale: CGFloat = min(resizedFrame.width / 292, resizedFrame.height / 54)
+        
+        /// Group 8
+        do {
+            context.saveGState()
+            
+            /// Group 3
+            do {
+                context.saveGState()
+                
+                /// Group 3
+                context.saveGState()
+                context.setAlpha(0.66)
+                context.beginTransparencyLayer(auxiliaryInfo: nil)
+                do {
+                    context.setShadow(
+                        offset: CGSize(width: 0 * resizedShadowScale, height: 2 * resizedShadowScale),
+                        blur: 9 * resizedShadowScale,
+                        color: UIColor(white: 0, alpha: 0.5).cgColor)
+                    context.beginTransparencyLayer(auxiliaryInfo: nil)
+                    do {
+                        context.translateBy(x: 1.27, y: 0.57)
+                        
+                        /// Oval 2
+                        let oval2 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 52.41, height: 52.41))
+                        context.saveGState()
+                        UIColor.white.setFill()
+                        oval2.fill()
+                        context.restoreGState()
+                        
+                        /// Oval 2
+                        let oval3 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 52.41, height: 52.41))
+                        context.saveGState()
+                        context.translateBy(x: 236.32, y: 0)
+                        UIColor.white.setFill()
+                        oval3.fill()
+                        context.restoreGState()
+                        
+                        /// Rectangle
+                        let rectangle = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 235.83, height: 52.41))
+                        context.saveGState()
+                        context.translateBy(x: 26.2, y: 0)
+                        UIColor.white.setFill()
+                        rectangle.fill()
+                        context.restoreGState()
+                    }
+                    context.endTransparencyLayer()
+                }
+                context.endTransparencyLayer()
+                context.restoreGState()
+                
+                /// Oval 2
+                let oval4 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 53, height: 53))
+                context.saveGState()
+                context.translateBy(x: 0, y: 1)
+                UIColor.white.setFill()
+                oval4.fill()
+                context.restoreGState()
+                
+                /// Oval 2
+                let oval5 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 53, height: 53))
+                context.saveGState()
+                context.translateBy(x: 239, y: 1)
+                UIColor.white.setFill()
+                oval5.fill()
+                context.restoreGState()
+                
+                /// Rectangle
+                let rectangle2 = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 238.5, height: 53))
+                context.saveGState()
+                context.translateBy(x: 26.5, y: 1)
+                UIColor.white.setFill()
+                rectangle2.fill()
+                context.restoreGState()
+                
+                context.restoreGState()
+            }
+            
+            /// 试用
+            let layer = NSMutableAttributedString(string: "试用")
+            layer.addAttribute(NSFontAttributeName, value: UIFont(name: "PingFangSC-Semibold", size: 20)!, range: NSRange(location: 0, length: layer.length))
+            layer.addAttribute(NSForegroundColorAttributeName, value: UIColor(white: 0.238, alpha: 1), range: NSRange(location: 0, length: layer.length))
+            layer.addAttribute(NSKernAttributeName, value: 0.24, range: NSRange(location: 0, length: layer.length))
+            context.saveGState()
+            layer.draw(at: CGPoint(x: 126, y: 12))
+            context.restoreGState()
+            
+            context.restoreGState()
+        }
+        
+        context.restoreGState()
+    }
+    
+    class func drawRegisterPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 21), resizing: ResizingBehavior = .aspectFit) {
+        /// General Declarations
+        let context = UIGraphicsGetCurrentContext()!
+        let baseTransform = context.userSpaceToDeviceSpaceTransform.inverted()
+        
+        /// Resize to Target Frame
+        context.saveGState()
+        let resizedFrame = resizing.apply(rect: CGRect(x: 0, y: 0, width: 62, height: 21), target: targetFrame)
+        context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
+        context.scaleBy(x: resizedFrame.width / 62, y: resizedFrame.height / 21)
+        
+        /// Group
+        do {
+            context.saveGState()
+            
+            /// Group 4
+            do {
+                context.saveGState()
+                
+                /// Group 2
+                do {
+                    context.saveGState()
+                    
+                    /// Combined Shape
+                    let combinedShape = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 60.48, height: 20.02), cornerRadius: 13)
+                    context.saveGState()
+                    context.translateBy(x: 0.66, y: 0.56)
+                    context.saveGState()
+                    context.beginPath()
+                    context.addPath(combinedShape.cgPath)
+                    context.addRect(combinedShape.bounds.insetBy(dx: -96, dy: -96))
+                    context.clip(using: .evenOdd)
+                    context.translateBy(x: -237.48, y: 0)
+                    do {
+                        let baseZero = context.convertToDeviceSpace(CGPoint.zero).applying(baseTransform)
+                        let baseOne = context.convertToDeviceSpace(CGPoint(x: 1, y: 1)).applying(baseTransform)
+                        let baseOffset = context.convertToDeviceSpace(CGPoint(x: 237.48, y: 0)).applying(baseTransform)
+                        let shadowOffset = CGSize(width: baseOffset.x - baseZero.x, height: baseOffset.y - baseZero.y)
+                        let shadowBlur: CGFloat = 16 * min(baseOne.x - baseZero.x, baseOne.y - baseZero.y)
+                        context.setShadow(offset: shadowOffset, blur: shadowBlur, color: UIColor(white: 0.559, alpha: 0.23).cgColor)
+                    }
+                    context.beginTransparencyLayer(auxiliaryInfo: nil)
+                    do {
+                        UIColor.black.setFill()
+                        combinedShape.fill()
+                        context.saveGState()
+                        combinedShape.lineWidth = 16
+                        UIColor.black.setStroke()
+                        combinedShape.stroke()
+                        context.restoreGState()
+                    }
+                    context.endTransparencyLayer()
+                    context.restoreGState()
+                    UIColor(white: 0.898, alpha: 0.67).setFill()
+                    combinedShape.fill()
+                    context.restoreGState()
+                    
+                    /// Combined Shape (Outline Mask)
+                    context.saveGState()
+                    combinedShape.apply(CGAffineTransform(translationX: 0.66, y: 0.56))
+                    combinedShape.addClip()
+                    
+                    // Empty.
+                    
+                    context.restoreGState()
+                    // End Combined Shape (Outline Mask)
+                    
+                    /// Combined Shape
+                    let combinedShape2 = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 75.65, height: 20.02), cornerRadius: 13)
+                    context.saveGState()
+                    context.translateBy(x: -7, y: 0.56)
+                    UIColor(hue: 0.59, saturation: 0.68, brightness: 0.725, alpha: 1).setFill()
+                    combinedShape2.fill()
+                    context.restoreGState()
+                    
+                    /// Combined Shape (Outline Mask)
+                    context.saveGState()
+                    combinedShape2.apply(CGAffineTransform(translationX: -7, y: 0.56))
+                    combinedShape2.addClip()
+                    
+                    // Empty.
+                    
+                    context.restoreGState()
+                    // End Combined Shape (Outline Mask)
+                    
+                    context.restoreGState()
+                }
+                
+                context.restoreGState()
+            }
+            
+            context.restoreGState()
+        }
+        
+        context.restoreGState()
+    }
+    
+    class func drawCancel(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 18), resizing: ResizingBehavior = .aspectFit) {
+        /// General Declarations
+        let context = UIGraphicsGetCurrentContext()!
+        let baseTransform = context.userSpaceToDeviceSpaceTransform.inverted()
+        
+        /// Resize to Target Frame
+        context.saveGState()
+        let resizedFrame = resizing.apply(rect: CGRect(x: 0, y: 0, width: 62, height: 18), target: targetFrame)
+        context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
+        context.scaleBy(x: resizedFrame.width / 62, y: resizedFrame.height / 18)
+        
+        /// Group
+        do {
+            context.saveGState()
+            context.translateBy(x: 0, y: 1)
+            
+            /// Group 4
+            do {
+                context.saveGState()
+                
+                /// Group 2
+                do {
+                    context.saveGState()
+                    
+                    /// Combined Shape
+                    let combinedShape = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 61.2, height: 15.89), cornerRadius: 13)
+                    context.saveGState()
+                    context.translateBy(x: 0.66, y: 0.69)
+                    context.saveGState()
+                    context.beginPath()
+                    context.addPath(combinedShape.cgPath)
+                    context.addRect(combinedShape.bounds.insetBy(dx: -46, dy: -46))
+                    context.clip(using: .evenOdd)
+                    context.translateBy(x: -138.2, y: 0)
+                    do {
+                        let baseZero = context.convertToDeviceSpace(CGPoint.zero).applying(baseTransform)
+                        let baseOne = context.convertToDeviceSpace(CGPoint(x: 1, y: 1)).applying(baseTransform)
+                        let baseOffset = context.convertToDeviceSpace(CGPoint(x: 138.2, y: 0)).applying(baseTransform)
+                        let shadowOffset = CGSize(width: baseOffset.x - baseZero.x, height: baseOffset.y - baseZero.y)
+                        let shadowBlur: CGFloat = 16 * min(baseOne.x - baseZero.x, baseOne.y - baseZero.y)
+                        context.setShadow(offset: shadowOffset, blur: shadowBlur, color: UIColor(white: 0.559, alpha: 0.23).cgColor)
+                    }
+                    context.beginTransparencyLayer(auxiliaryInfo: nil)
+                    do {
+                        UIColor.black.setFill()
+                        combinedShape.fill()
+                        context.saveGState()
+                        combinedShape.lineWidth = 6
+                        UIColor.black.setStroke()
+                        combinedShape.stroke()
+                        context.restoreGState()
+                    }
+                    context.endTransparencyLayer()
+                    context.restoreGState()
+                    UIColor(white: 0.898, alpha: 0.67).setFill()
+                    combinedShape.fill()
+                    context.restoreGState()
+                    
+                    /// Combined Shape (Outline Mask)
+                    context.saveGState()
+                    combinedShape.apply(CGAffineTransform(translationX: 0.66, y: 0.69))
+                    combinedShape.addClip()
+                    
+                    // Empty.
+                    
+                    context.restoreGState()
+                    // End Combined Shape (Outline Mask)
+                    
+                    /// Combined Shape
+                    let combinedShape2 = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 77.14, height: 20.02), cornerRadius: 13)
                     context.saveGState()
                     context.translateBy(x: -7, y: -3.44)
                     UIColor(hue: 0.791, saturation: 0, brightness: 0.608, alpha: 1).setFill()
@@ -106,13 +516,105 @@ class UI: NSObject {
                 context.restoreGState()
             }
             
-            /// CANCEL
-            let cANCEL = NSMutableAttributedString(string: "CANCEL")
-            cANCEL.addAttribute(NSFontAttributeName, value: UIFont(name: "SFProDisplay-Bold", size: 13)!, range: NSRange(location: 0, length: cANCEL.length))
-            cANCEL.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: cANCEL.length))
-            cANCEL.addAttribute(NSKernAttributeName, value: 0.16, range: NSRange(location: 0, length: cANCEL.length))
+            context.restoreGState()
+        }
+        
+        context.restoreGState()
+    }
+    
+    class func drawTAKEATOURPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 292, height: 54), resizing: ResizingBehavior = .aspectFit) {
+        /// General Declarations
+        let context = UIGraphicsGetCurrentContext()!
+        
+        /// Resize to Target Frame
+        context.saveGState()
+        let resizedFrame = resizing.apply(rect: CGRect(x: 0, y: 0, width: 292, height: 54), target: targetFrame)
+        context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
+        context.scaleBy(x: resizedFrame.width / 292, y: resizedFrame.height / 54)
+        let resizedShadowScale: CGFloat = min(resizedFrame.width / 292, resizedFrame.height / 54)
+        
+        /// Group 8
+        do {
             context.saveGState()
-            cANCEL.draw(in: CGRect(x: 0, y: 0.17, width: 62, height: 17))
+            
+            /// Group 3
+            do {
+                context.saveGState()
+                
+                /// Group 3
+                context.saveGState()
+                context.setAlpha(0.66)
+                context.beginTransparencyLayer(auxiliaryInfo: nil)
+                do {
+                    context.setShadow(
+                        offset: CGSize(width: 0 * resizedShadowScale, height: 2 * resizedShadowScale),
+                        blur: 9 * resizedShadowScale,
+                        color: UIColor(white: 0, alpha: 0.5).cgColor)
+                    context.beginTransparencyLayer(auxiliaryInfo: nil)
+                    do {
+                        context.translateBy(x: 1.27, y: 0.57)
+                        
+                        /// Oval 2
+                        let oval2 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 52.41, height: 52.41))
+                        context.saveGState()
+                        UIColor.white.setFill()
+                        oval2.fill()
+                        context.restoreGState()
+                        
+                        /// Oval 2
+                        let oval3 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 52.41, height: 52.41))
+                        context.saveGState()
+                        context.translateBy(x: 236.32, y: 0)
+                        UIColor.white.setFill()
+                        oval3.fill()
+                        context.restoreGState()
+                        
+                        /// Rectangle
+                        let rectangle = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 235.83, height: 52.41))
+                        context.saveGState()
+                        context.translateBy(x: 26.2, y: 0)
+                        UIColor.white.setFill()
+                        rectangle.fill()
+                        context.restoreGState()
+                    }
+                    context.endTransparencyLayer()
+                }
+                context.endTransparencyLayer()
+                context.restoreGState()
+                
+                /// Oval 2
+                let oval4 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 53, height: 53))
+                context.saveGState()
+                context.translateBy(x: 0, y: 1)
+                UIColor(white: 0.851, alpha: 1).setFill()
+                oval4.fill()
+                context.restoreGState()
+                
+                /// Oval 2
+                let oval5 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 53, height: 53))
+                context.saveGState()
+                context.translateBy(x: 239, y: 1)
+                UIColor(white: 0.851, alpha: 1).setFill()
+                oval5.fill()
+                context.restoreGState()
+                
+                /// Rectangle
+                let rectangle2 = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 238.5, height: 53))
+                context.saveGState()
+                context.translateBy(x: 26.5, y: 1)
+                UIColor(white: 0.852, alpha: 1).setFill()
+                rectangle2.fill()
+                context.restoreGState()
+                
+                context.restoreGState()
+            }
+            
+            /// 试用
+            let layer = NSMutableAttributedString(string: "试用")
+            layer.addAttribute(NSFontAttributeName, value: UIFont(name: "PingFangSC-Semibold", size: 20)!, range: NSRange(location: 0, length: layer.length))
+            layer.addAttribute(NSKernAttributeName, value: 0.24, range: NSRange(location: 0, length: layer.length))
+            context.saveGState()
+            layer.draw(at: CGPoint(x: 126, y: 12))
             context.restoreGState()
             
             context.restoreGState()
@@ -121,52 +623,202 @@ class UI: NSObject {
         context.restoreGState()
     }
     
-    class func drawGlyphs_GuidesSizeGuideNavigationBarAndToolbar(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 28, height: 28), resizing: ResizingBehavior = .aspectFit) {
+    class func drawLOGIN(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 292, height: 54), resizing: ResizingBehavior = .aspectFit) {
         /// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
         /// Resize to Target Frame
         context.saveGState()
-        let resizedFrame = resizing.apply(rect: CGRect(x: 0, y: 0, width: 28, height: 28), target: targetFrame)
+        let resizedFrame = resizing.apply(rect: CGRect(x: 0, y: 0, width: 292, height: 54), target: targetFrame)
         context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
-        context.scaleBy(x: resizedFrame.width / 28, y: resizedFrame.height / 28)
+        context.scaleBy(x: resizedFrame.width / 292, y: resizedFrame.height / 54)
+        let resizedShadowScale: CGFloat = min(resizedFrame.width / 292, resizedFrame.height / 54)
         
-        /// Max Width or Height @2x: 28pt x 28pt
-        let maxWidthOrHeight2x28ptX28pt = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 28, height: 28))
-        context.saveGState()
-        context.setAlpha(0.3)
-        context.beginTransparencyLayer(auxiliaryInfo: nil)
+        /// Group 8
         do {
-            UIColor(hue: 0.009, saturation: 0.812, brightness: 1, alpha: 1).setFill()
-            maxWidthOrHeight2x28ptX28pt.fill()
+            context.saveGState()
+            
+            /// Group 3
+            do {
+                context.saveGState()
+                
+                /// Group 3
+                context.saveGState()
+                context.setAlpha(0.66)
+                context.beginTransparencyLayer(auxiliaryInfo: nil)
+                do {
+                    context.setShadow(
+                        offset: CGSize(width: 0 * resizedShadowScale, height: 2 * resizedShadowScale),
+                        blur: 9 * resizedShadowScale,
+                        color: UIColor(white: 0, alpha: 0.5).cgColor)
+                    context.beginTransparencyLayer(auxiliaryInfo: nil)
+                    do {
+                        context.translateBy(x: 1.27, y: 0.57)
+                        
+                        /// Oval 2
+                        let oval2 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 52.41, height: 52.41))
+                        context.saveGState()
+                        UIColor.white.setFill()
+                        oval2.fill()
+                        context.restoreGState()
+                        
+                        /// Oval 2
+                        let oval3 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 52.41, height: 52.41))
+                        context.saveGState()
+                        context.translateBy(x: 236.32, y: 0)
+                        UIColor.white.setFill()
+                        oval3.fill()
+                        context.restoreGState()
+                        
+                        /// Rectangle
+                        let rectangle = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 235.83, height: 52.41))
+                        context.saveGState()
+                        context.translateBy(x: 26.2, y: 0)
+                        UIColor.white.setFill()
+                        rectangle.fill()
+                        context.restoreGState()
+                    }
+                    context.endTransparencyLayer()
+                }
+                context.endTransparencyLayer()
+                context.restoreGState()
+                
+                /// Oval 2
+                let oval4 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 53, height: 53))
+                context.saveGState()
+                context.translateBy(x: 0, y: 1)
+                UIColor(white: 0.29, alpha: 1).setFill()
+                oval4.fill()
+                context.restoreGState()
+                
+                /// Oval 2
+                let oval5 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 53, height: 53))
+                context.saveGState()
+                context.translateBy(x: 239, y: 1)
+                UIColor(white: 0.29, alpha: 1).setFill()
+                oval5.fill()
+                context.restoreGState()
+                
+                /// Rectangle
+                let rectangle2 = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 238.5, height: 53))
+                context.saveGState()
+                context.translateBy(x: 26.5, y: 1)
+                UIColor(white: 0.29, alpha: 1).setFill()
+                rectangle2.fill()
+                context.restoreGState()
+                
+                context.restoreGState()
+            }
+            
+            /// 登录
+            let layer = NSMutableAttributedString(string: "登录")
+            layer.addAttribute(NSFontAttributeName, value: UIFont(name: "PingFangSC-Semibold", size: 20)!, range: NSRange(location: 0, length: layer.length))
+            layer.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: layer.length))
+            layer.addAttribute(NSKernAttributeName, value: 0.24, range: NSRange(location: 0, length: layer.length))
+            context.saveGState()
+            layer.draw(at: CGPoint(x: 126, y: 12))
+            context.restoreGState()
+            
+            context.restoreGState()
         }
-        context.endTransparencyLayer()
+        
         context.restoreGState()
-        /// Target Size @2x: 25pt x 25pt
-        let targetSize2x25ptX25pt = UIBezierPath()
-        targetSize2x25ptX25pt.move(to: CGPoint.zero)
-        targetSize2x25ptX25pt.addLine(to: CGPoint(x: 28, y: 0))
-        targetSize2x25ptX25pt.addLine(to: CGPoint(x: 28, y: 28))
-        targetSize2x25ptX25pt.addLine(to: CGPoint(x: 0, y: 28))
-        targetSize2x25ptX25pt.addLine(to: CGPoint.zero)
-        targetSize2x25ptX25pt.close()
-        targetSize2x25ptX25pt.move(to: CGPoint(x: 1.5, y: 1.5))
-        targetSize2x25ptX25pt.addLine(to: CGPoint(x: 1.5, y: 26.5))
-        targetSize2x25ptX25pt.addLine(to: CGPoint(x: 26.5, y: 26.5))
-        targetSize2x25ptX25pt.addLine(to: CGPoint(x: 26.5, y: 1.5))
-        targetSize2x25ptX25pt.addLine(to: CGPoint(x: 1.5, y: 1.5))
-        targetSize2x25ptX25pt.close()
-        targetSize2x25ptX25pt.move(to: CGPoint(x: 1.5, y: 1.5))
+    }
+    
+    class func drawRegister2(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 18), resizing: ResizingBehavior = .aspectFit) {
+        /// General Declarations
+        let context = UIGraphicsGetCurrentContext()!
+        let baseTransform = context.userSpaceToDeviceSpaceTransform.inverted()
+        
+        /// Resize to Target Frame
         context.saveGState()
-        context.setAlpha(0.3)
-        context.beginTransparencyLayer(auxiliaryInfo: nil)
+        let resizedFrame = resizing.apply(rect: CGRect(x: 0, y: 0, width: 62, height: 18), target: targetFrame)
+        context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
+        context.scaleBy(x: resizedFrame.width / 62, y: resizedFrame.height / 18)
+        
+        /// Group
         do {
-            targetSize2x25ptX25pt.usesEvenOddFillRule = true
-            UIColor(hue: 0.009, saturation: 0.812, brightness: 1, alpha: 1).setFill()
-            targetSize2x25ptX25pt.fill()
+            context.saveGState()
+            context.translateBy(x: 0, y: 1)
+            
+            /// Group 4
+            do {
+                context.saveGState()
+                
+                /// Group 2
+                do {
+                    context.saveGState()
+                    
+                    /// Combined Shape
+                    let combinedShape = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 60.92, height: 15.89), cornerRadius: 13)
+                    context.saveGState()
+                    context.translateBy(x: 0.66, y: 0.69)
+                    context.saveGState()
+                    context.beginPath()
+                    context.addPath(combinedShape.cgPath)
+                    context.addRect(combinedShape.bounds.insetBy(dx: -46, dy: -46))
+                    context.clip(using: .evenOdd)
+                    context.translateBy(x: -137.92, y: 0)
+                    do {
+                        let baseZero = context.convertToDeviceSpace(CGPoint.zero).applying(baseTransform)
+                        let baseOne = context.convertToDeviceSpace(CGPoint(x: 1, y: 1)).applying(baseTransform)
+                        let baseOffset = context.convertToDeviceSpace(CGPoint(x: 137.92, y: 0)).applying(baseTransform)
+                        let shadowOffset = CGSize(width: baseOffset.x - baseZero.x, height: baseOffset.y - baseZero.y)
+                        let shadowBlur: CGFloat = 16 * min(baseOne.x - baseZero.x, baseOne.y - baseZero.y)
+                        context.setShadow(offset: shadowOffset, blur: shadowBlur, color: UIColor(white: 0.559, alpha: 0.23).cgColor)
+                    }
+                    context.beginTransparencyLayer(auxiliaryInfo: nil)
+                    do {
+                        UIColor.black.setFill()
+                        combinedShape.fill()
+                        context.saveGState()
+                        combinedShape.lineWidth = 6
+                        UIColor.black.setStroke()
+                        combinedShape.stroke()
+                        context.restoreGState()
+                    }
+                    context.endTransparencyLayer()
+                    context.restoreGState()
+                    UIColor(white: 0.898, alpha: 0.67).setFill()
+                    combinedShape.fill()
+                    context.restoreGState()
+                    
+                    /// Combined Shape (Outline Mask)
+                    context.saveGState()
+                    combinedShape.apply(CGAffineTransform(translationX: 0.66, y: 0.69))
+                    combinedShape.addClip()
+                    
+                    // Empty.
+                    
+                    context.restoreGState()
+                    // End Combined Shape (Outline Mask)
+                    
+                    /// Combined Shape
+                    let combinedShape2 = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 76.09, height: 20.02), cornerRadius: 13)
+                    context.saveGState()
+                    context.translateBy(x: -7, y: -3.44)
+                    UIColor(hue: 0.59, saturation: 0.674, brightness: 0.886, alpha: 1).setFill()
+                    combinedShape2.fill()
+                    context.restoreGState()
+                    
+                    /// Combined Shape (Outline Mask)
+                    context.saveGState()
+                    combinedShape2.apply(CGAffineTransform(translationX: -7, y: -3.44))
+                    combinedShape2.addClip()
+                    
+                    // Empty.
+                    
+                    context.restoreGState()
+                    // End Combined Shape (Outline Mask)
+                    
+                    context.restoreGState()
+                }
+                
+                context.restoreGState()
+            }
+            
+            context.restoreGState()
         }
-        context.endTransparencyLayer()
-        context.restoreGState()
         
         context.restoreGState()
     }
@@ -307,111 +959,6 @@ class UI: NSObject {
         context.restoreGState()
     }
     
-    class func drawRegisterPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 21), resizing: ResizingBehavior = .aspectFit) {
-        /// General Declarations
-        let context = UIGraphicsGetCurrentContext()!
-        let baseTransform = context.userSpaceToDeviceSpaceTransform.inverted()
-        
-        /// Resize to Target Frame
-        context.saveGState()
-        let resizedFrame = resizing.apply(rect: CGRect(x: 0, y: 0, width: 62, height: 21), target: targetFrame)
-        context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
-        context.scaleBy(x: resizedFrame.width / 62, y: resizedFrame.height / 21)
-        
-        /// Group
-        do {
-            context.saveGState()
-            
-            /// Group 4
-            do {
-                context.saveGState()
-                
-                /// Group 2
-                do {
-                    context.saveGState()
-                    
-                    /// Combined Shape
-                    let combinedShape = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 59.48, height: 20.02), cornerRadius: 13)
-                    context.saveGState()
-                    context.translateBy(x: 0.66, y: 0.56)
-                    context.saveGState()
-                    context.beginPath()
-                    context.addPath(combinedShape.cgPath)
-                    context.addRect(combinedShape.bounds.insetBy(dx: -96, dy: -96))
-                    context.clip(using: .evenOdd)
-                    context.translateBy(x: -236.48, y: 0)
-                    do {
-                        let baseZero = context.convertToDeviceSpace(CGPoint.zero).applying(baseTransform)
-                        let baseOne = context.convertToDeviceSpace(CGPoint(x: 1, y: 1)).applying(baseTransform)
-                        let baseOffset = context.convertToDeviceSpace(CGPoint(x: 236.48, y: 0)).applying(baseTransform)
-                        let shadowOffset = CGSize(width: baseOffset.x - baseZero.x, height: baseOffset.y - baseZero.y)
-                        let shadowBlur: CGFloat = 16 * min(baseOne.x - baseZero.x, baseOne.y - baseZero.y)
-                        context.setShadow(offset: shadowOffset, blur: shadowBlur, color: UIColor(white: 0.559, alpha: 0.23).cgColor)
-                    }
-                    context.beginTransparencyLayer(auxiliaryInfo: nil)
-                    do {
-                        UIColor.black.setFill()
-                        combinedShape.fill()
-                        context.saveGState()
-                        combinedShape.lineWidth = 16
-                        UIColor.black.setStroke()
-                        combinedShape.stroke()
-                        context.restoreGState()
-                    }
-                    context.endTransparencyLayer()
-                    context.restoreGState()
-                    UIColor(white: 0.898, alpha: 0.67).setFill()
-                    combinedShape.fill()
-                    context.restoreGState()
-                    
-                    /// Combined Shape (Outline Mask)
-                    context.saveGState()
-                    combinedShape.apply(CGAffineTransform(translationX: 0.66, y: 0.56))
-                    combinedShape.addClip()
-                    
-                    // Empty.
-                    
-                    context.restoreGState()
-                    // End Combined Shape (Outline Mask)
-                    
-                    /// Combined Shape
-                    let combinedShape2 = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 74.65, height: 20.02), cornerRadius: 13)
-                    context.saveGState()
-                    context.translateBy(x: -7, y: 0.56)
-                    UIColor(hue: 0.59, saturation: 0.68, brightness: 0.725, alpha: 1).setFill()
-                    combinedShape2.fill()
-                    context.restoreGState()
-                    
-                    /// Combined Shape (Outline Mask)
-                    context.saveGState()
-                    combinedShape2.apply(CGAffineTransform(translationX: -7, y: 0.56))
-                    combinedShape2.addClip()
-                    
-                    // Empty.
-                    
-                    context.restoreGState()
-                    // End Combined Shape (Outline Mask)
-                    
-                    context.restoreGState()
-                }
-                
-                context.restoreGState()
-            }
-            
-            /// REGISTER
-            let rEGISTER = NSMutableAttributedString(string: "REGISTER")
-            rEGISTER.addAttribute(NSFontAttributeName, value: UIFont(name: "SFProDisplay-Bold", size: 13)!, range: NSRange(location: 0, length: rEGISTER.length))
-            rEGISTER.addAttribute(NSForegroundColorAttributeName, value: UIColor(white: 0.835, alpha: 1), range: NSRange(location: 0, length: rEGISTER.length))
-            rEGISTER.addAttribute(NSKernAttributeName, value: 0.16, range: NSRange(location: 0, length: rEGISTER.length))
-            context.saveGState()
-            rEGISTER.draw(in: CGRect(x: 0, y: 3.17, width: 62, height: 17))
-            context.restoreGState()
-            
-            context.restoreGState()
-        }
-        
-        context.restoreGState()
-    }
     
     class func drawWindowLight2(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 344, height: 113), resizing: ResizingBehavior = .aspectFit) {
         /// General Declarations
@@ -541,108 +1088,6 @@ class UI: NSObject {
             }
             context.saveGState()
             dETAIL.draw(in: CGRect(x: 7, y: 66, width: 330.42, height: 18))
-            context.restoreGState()
-            
-            context.restoreGState()
-        }
-        
-        context.restoreGState()
-    }
-    
-    class func drawLOGINPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 292, height: 54), resizing: ResizingBehavior = .aspectFit) {
-        /// General Declarations
-        let context = UIGraphicsGetCurrentContext()!
-        
-        /// Resize to Target Frame
-        context.saveGState()
-        let resizedFrame = resizing.apply(rect: CGRect(x: 0, y: 0, width: 292, height: 54), target: targetFrame)
-        context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
-        context.scaleBy(x: resizedFrame.width / 292, y: resizedFrame.height / 54)
-        let resizedShadowScale: CGFloat = min(resizedFrame.width / 292, resizedFrame.height / 54)
-        
-        /// Group 8
-        do {
-            context.saveGState()
-            
-            /// Group 3
-            do {
-                context.saveGState()
-                
-                /// Group 3
-                context.saveGState()
-                context.setAlpha(0.66)
-                context.beginTransparencyLayer(auxiliaryInfo: nil)
-                do {
-                    context.setShadow(
-                        offset: CGSize(width: 0 * resizedShadowScale, height: 2 * resizedShadowScale),
-                        blur: 9 * resizedShadowScale,
-                        color: UIColor(white: 0, alpha: 0.5).cgColor)
-                    context.beginTransparencyLayer(auxiliaryInfo: nil)
-                    do {
-                        context.translateBy(x: 1.27, y: 0.57)
-                        
-                        /// Oval 2
-                        let oval2 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 52.41, height: 52.41))
-                        context.saveGState()
-                        UIColor.white.setFill()
-                        oval2.fill()
-                        context.restoreGState()
-                        
-                        /// Oval 2
-                        let oval3 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 52.41, height: 52.41))
-                        context.saveGState()
-                        context.translateBy(x: 236.32, y: 0)
-                        UIColor.white.setFill()
-                        oval3.fill()
-                        context.restoreGState()
-                        
-                        /// Rectangle
-                        let rectangle = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 235.83, height: 52.41))
-                        context.saveGState()
-                        context.translateBy(x: 26.2, y: 0)
-                        UIColor.white.setFill()
-                        rectangle.fill()
-                        context.restoreGState()
-                    }
-                    context.endTransparencyLayer()
-                }
-                context.endTransparencyLayer()
-                context.restoreGState()
-                
-                /// Oval 2
-                let oval4 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 53, height: 53))
-                context.saveGState()
-                context.translateBy(x: 0, y: 1)
-                UIColor(white: 0.149, alpha: 1).setFill()
-                oval4.fill()
-                context.restoreGState()
-                
-                /// Oval 2
-                let oval5 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 53, height: 53))
-                context.saveGState()
-                context.translateBy(x: 239, y: 1)
-                UIColor(white: 0.149, alpha: 1).setFill()
-                oval5.fill()
-                context.restoreGState()
-                
-                /// Rectangle
-                let rectangle2 = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 238.5, height: 53))
-                context.saveGState()
-                context.translateBy(x: 26.5, y: 1)
-                UIColor(white: 0.148, alpha: 1).setFill()
-                rectangle2.fill()
-                context.restoreGState()
-                
-                context.restoreGState()
-            }
-            
-            /// LOGIN
-            let lOGIN2 = NSMutableAttributedString(string: "LOGIN")
-            lOGIN2.addAttribute(NSFontAttributeName, value: UIFont(name: "SFProDisplay-Bold", size: 20)!, range: NSRange(location: 0, length: lOGIN2.length))
-            lOGIN2.addAttribute(NSForegroundColorAttributeName, value: UIColor(hue: 1, saturation: 0.004, brightness: 0.633, alpha: 1), range: NSRange(location: 0, length: lOGIN2.length))
-            lOGIN2.addAttribute(NSKernAttributeName, value: 0.24, range: NSRange(location: 0, length: lOGIN2.length))
-            context.saveGState()
-            lOGIN2.draw(at: CGPoint(x: 116, y: 13))
             context.restoreGState()
             
             context.restoreGState()
@@ -781,54 +1226,6 @@ class UI: NSObject {
         context.restoreGState()
     }
     
-    class func drawGlyphsNavigationOrToolbarPlaceholder1OnLight(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 28, height: 28), resizing: ResizingBehavior = .aspectFit) {
-        /// General Declarations
-        let context = UIGraphicsGetCurrentContext()!
-        
-        /// Resize to Target Frame
-        context.saveGState()
-        let resizedFrame = resizing.apply(rect: CGRect(x: 0, y: 0, width: 28, height: 28), target: targetFrame)
-        context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
-        context.scaleBy(x: resizedFrame.width / 28, y: resizedFrame.height / 28)
-        
-        /// Guide / Glyph Sizing - Navigation Bar and Toolbar
-        // Warning: New symbols are not supported.
-        /// Star
-        let star = UIBezierPath()
-        star.move(to: CGPoint(x: 6.66, y: 20.85))
-        star.addLine(to: CGPoint(x: 12.36, y: 16.65))
-        star.addLine(to: CGPoint(x: 18.07, y: 20.85))
-        star.addLine(to: CGPoint(x: 15.84, y: 14.13))
-        star.addLine(to: CGPoint(x: 21.59, y: 10))
-        star.addLine(to: CGPoint(x: 14.51, y: 10.05))
-        star.addLine(to: CGPoint(x: 12.36, y: 3.3))
-        star.addLine(to: CGPoint(x: 10.22, y: 10.05))
-        star.addLine(to: CGPoint(x: 3.14, y: 10))
-        star.addLine(to: CGPoint(x: 8.89, y: 14.13))
-        star.addLine(to: CGPoint(x: 6.66, y: 20.85))
-        star.close()
-        star.move(to: CGPoint(x: 12.36, y: 17.89))
-        star.addLine(to: CGPoint(x: 4.72, y: 23.52))
-        star.addLine(to: CGPoint(x: 7.71, y: 14.51))
-        star.addLine(to: CGPoint(x: 0, y: 8.98))
-        star.addLine(to: CGPoint(x: 9.49, y: 9.04))
-        star.addLine(to: CGPoint(x: 12.36, y: 0))
-        star.addLine(to: CGPoint(x: 15.24, y: 9.04))
-        star.addLine(to: CGPoint(x: 24.73, y: 8.98))
-        star.addLine(to: CGPoint(x: 17.02, y: 14.51))
-        star.addLine(to: CGPoint(x: 20, y: 23.52))
-        star.addLine(to: CGPoint(x: 12.36, y: 17.89))
-        star.close()
-        star.move(to: CGPoint(x: 12.36, y: 17.89))
-        context.saveGState()
-        context.translateBy(x: 1.64, y: 2)
-        UIColor(hue: 0.587, saturation: 1, brightness: 1, alpha: 1).setFill()
-        star.fill()
-        context.restoreGState()
-        
-        context.restoreGState()
-    }
-    
     class func drawButtonWhite(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 21, height: 21), resizing: ResizingBehavior = .aspectFit) {
         /// General Declarations
         let context = UIGraphicsGetCurrentContext()!
@@ -886,317 +1283,6 @@ class UI: NSObject {
             UIColor(hue: 0.791, saturation: 0, brightness: 0.29, alpha: 1).setStroke()
             close.stroke()
             context.restoreGState()
-            context.restoreGState()
-            
-            context.restoreGState()
-        }
-        
-        context.restoreGState()
-    }
-    
-    class func drawTAKEATOUR(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 292, height: 54), resizing: ResizingBehavior = .aspectFit) {
-        /// General Declarations
-        let context = UIGraphicsGetCurrentContext()!
-        
-        /// Resize to Target Frame
-        context.saveGState()
-        let resizedFrame = resizing.apply(rect: CGRect(x: 0, y: 0, width: 292, height: 54), target: targetFrame)
-        context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
-        context.scaleBy(x: resizedFrame.width / 292, y: resizedFrame.height / 54)
-        let resizedShadowScale: CGFloat = min(resizedFrame.width / 292, resizedFrame.height / 54)
-        
-        /// Group 8
-        do {
-            context.saveGState()
-            
-            /// Group 3
-            do {
-                context.saveGState()
-                
-                /// Group 3
-                context.saveGState()
-                context.setAlpha(0.66)
-                context.beginTransparencyLayer(auxiliaryInfo: nil)
-                do {
-                    context.setShadow(
-                        offset: CGSize(width: 0 * resizedShadowScale, height: 2 * resizedShadowScale),
-                        blur: 9 * resizedShadowScale,
-                        color: UIColor(white: 0, alpha: 0.5).cgColor)
-                    context.beginTransparencyLayer(auxiliaryInfo: nil)
-                    do {
-                        context.translateBy(x: 1.27, y: 0.57)
-                        
-                        /// Oval 2
-                        let oval2 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 52.41, height: 52.41))
-                        context.saveGState()
-                        UIColor.white.setFill()
-                        oval2.fill()
-                        context.restoreGState()
-                        
-                        /// Oval 2
-                        let oval3 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 52.41, height: 52.41))
-                        context.saveGState()
-                        context.translateBy(x: 236.32, y: 0)
-                        UIColor.white.setFill()
-                        oval3.fill()
-                        context.restoreGState()
-                        
-                        /// Rectangle
-                        let rectangle = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 235.83, height: 52.41))
-                        context.saveGState()
-                        context.translateBy(x: 26.2, y: 0)
-                        UIColor.white.setFill()
-                        rectangle.fill()
-                        context.restoreGState()
-                    }
-                    context.endTransparencyLayer()
-                }
-                context.endTransparencyLayer()
-                context.restoreGState()
-                
-                /// Oval 2
-                let oval4 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 53, height: 53))
-                context.saveGState()
-                context.translateBy(x: 0, y: 1)
-                UIColor.white.setFill()
-                oval4.fill()
-                context.restoreGState()
-                
-                /// Oval 2
-                let oval5 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 53, height: 53))
-                context.saveGState()
-                context.translateBy(x: 239, y: 1)
-                UIColor.white.setFill()
-                oval5.fill()
-                context.restoreGState()
-                
-                /// Rectangle
-                let rectangle2 = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 238.5, height: 53))
-                context.saveGState()
-                context.translateBy(x: 26.5, y: 1)
-                UIColor.white.setFill()
-                rectangle2.fill()
-                context.restoreGState()
-                
-                context.restoreGState()
-            }
-            
-            /// TAKE A TOUR
-            let tAKEATOUR2 = NSMutableAttributedString(string: "TAKE A TOUR")
-            tAKEATOUR2.addAttribute(NSFontAttributeName, value: UIFont(name: "SFProDisplay-Bold", size: 20)!, range: NSRange(location: 0, length: tAKEATOUR2.length))
-            tAKEATOUR2.addAttribute(NSForegroundColorAttributeName, value: UIColor(white: 0.238, alpha: 1), range: NSRange(location: 0, length: tAKEATOUR2.length))
-            tAKEATOUR2.addAttribute(NSKernAttributeName, value: 0.24, range: NSRange(location: 0, length: tAKEATOUR2.length))
-            context.saveGState()
-            tAKEATOUR2.draw(at: CGPoint(x: 82, y: 14))
-            context.restoreGState()
-            
-            context.restoreGState()
-        }
-        
-        context.restoreGState()
-    }
-    
-    class func drawLOGIN(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 292, height: 54), resizing: ResizingBehavior = .aspectFit) {
-        /// General Declarations
-        let context = UIGraphicsGetCurrentContext()!
-        
-        /// Resize to Target Frame
-        context.saveGState()
-        let resizedFrame = resizing.apply(rect: CGRect(x: 0, y: 0, width: 292, height: 54), target: targetFrame)
-        context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
-        context.scaleBy(x: resizedFrame.width / 292, y: resizedFrame.height / 54)
-        let resizedShadowScale: CGFloat = min(resizedFrame.width / 292, resizedFrame.height / 54)
-        
-        /// Group 8
-        do {
-            context.saveGState()
-            
-            /// Group 3
-            do {
-                context.saveGState()
-                
-                /// Group 3
-                context.saveGState()
-                context.setAlpha(0.66)
-                context.beginTransparencyLayer(auxiliaryInfo: nil)
-                do {
-                    context.setShadow(
-                        offset: CGSize(width: 0 * resizedShadowScale, height: 2 * resizedShadowScale),
-                        blur: 9 * resizedShadowScale,
-                        color: UIColor(white: 0, alpha: 0.5).cgColor)
-                    context.beginTransparencyLayer(auxiliaryInfo: nil)
-                    do {
-                        context.translateBy(x: 1.27, y: 0.57)
-                        
-                        /// Oval 2
-                        let oval2 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 52.41, height: 52.41))
-                        context.saveGState()
-                        UIColor.white.setFill()
-                        oval2.fill()
-                        context.restoreGState()
-                        
-                        /// Oval 2
-                        let oval3 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 52.41, height: 52.41))
-                        context.saveGState()
-                        context.translateBy(x: 236.32, y: 0)
-                        UIColor.white.setFill()
-                        oval3.fill()
-                        context.restoreGState()
-                        
-                        /// Rectangle
-                        let rectangle = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 235.83, height: 52.41))
-                        context.saveGState()
-                        context.translateBy(x: 26.2, y: 0)
-                        UIColor.white.setFill()
-                        rectangle.fill()
-                        context.restoreGState()
-                    }
-                    context.endTransparencyLayer()
-                }
-                context.endTransparencyLayer()
-                context.restoreGState()
-                
-                /// Oval 2
-                let oval4 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 53, height: 53))
-                context.saveGState()
-                context.translateBy(x: 0, y: 1)
-                UIColor(white: 0.29, alpha: 1).setFill()
-                oval4.fill()
-                context.restoreGState()
-                
-                /// Oval 2
-                let oval5 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 53, height: 53))
-                context.saveGState()
-                context.translateBy(x: 239, y: 1)
-                UIColor(white: 0.29, alpha: 1).setFill()
-                oval5.fill()
-                context.restoreGState()
-                
-                /// Rectangle
-                let rectangle2 = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 238.5, height: 53))
-                context.saveGState()
-                context.translateBy(x: 26.5, y: 1)
-                UIColor(white: 0.29, alpha: 1).setFill()
-                rectangle2.fill()
-                context.restoreGState()
-                
-                context.restoreGState()
-            }
-            
-            /// LOGIN
-            let lOGIN2 = NSMutableAttributedString(string: "LOGIN")
-            lOGIN2.addAttribute(NSFontAttributeName, value: UIFont(name: "SFProDisplay-Bold", size: 20)!, range: NSRange(location: 0, length: lOGIN2.length))
-            lOGIN2.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: lOGIN2.length))
-            lOGIN2.addAttribute(NSKernAttributeName, value: 0.24, range: NSRange(location: 0, length: lOGIN2.length))
-            context.saveGState()
-            lOGIN2.draw(at: CGPoint(x: 116, y: 13))
-            context.restoreGState()
-            
-            context.restoreGState()
-        }
-        
-        context.restoreGState()
-    }
-    
-    class func drawRegister2(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 18), resizing: ResizingBehavior = .aspectFit) {
-        /// General Declarations
-        let context = UIGraphicsGetCurrentContext()!
-        let baseTransform = context.userSpaceToDeviceSpaceTransform.inverted()
-        
-        /// Resize to Target Frame
-        context.saveGState()
-        let resizedFrame = resizing.apply(rect: CGRect(x: 0, y: 0, width: 62, height: 18), target: targetFrame)
-        context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
-        context.scaleBy(x: resizedFrame.width / 62, y: resizedFrame.height / 18)
-        
-        /// Group
-        do {
-            context.saveGState()
-            
-            /// Group 4
-            do {
-                context.saveGState()
-                context.translateBy(x: 0, y: 1)
-                
-                /// Group 2
-                do {
-                    context.saveGState()
-                    
-                    /// Combined Shape
-                    let combinedShape = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 59.48, height: 15.89), cornerRadius: 13)
-                    context.saveGState()
-                    context.translateBy(x: 0.66, y: 0.69)
-                    context.saveGState()
-                    context.beginPath()
-                    context.addPath(combinedShape.cgPath)
-                    context.addRect(combinedShape.bounds.insetBy(dx: -46, dy: -46))
-                    context.clip(using: .evenOdd)
-                    context.translateBy(x: -136.48, y: 0)
-                    do {
-                        let baseZero = context.convertToDeviceSpace(CGPoint.zero).applying(baseTransform)
-                        let baseOne = context.convertToDeviceSpace(CGPoint(x: 1, y: 1)).applying(baseTransform)
-                        let baseOffset = context.convertToDeviceSpace(CGPoint(x: 136.48, y: 0)).applying(baseTransform)
-                        let shadowOffset = CGSize(width: baseOffset.x - baseZero.x, height: baseOffset.y - baseZero.y)
-                        let shadowBlur: CGFloat = 16 * min(baseOne.x - baseZero.x, baseOne.y - baseZero.y)
-                        context.setShadow(offset: shadowOffset, blur: shadowBlur, color: UIColor(white: 0.559, alpha: 0.23).cgColor)
-                    }
-                    context.beginTransparencyLayer(auxiliaryInfo: nil)
-                    do {
-                        UIColor.black.setFill()
-                        combinedShape.fill()
-                        context.saveGState()
-                        combinedShape.lineWidth = 6
-                        UIColor.black.setStroke()
-                        combinedShape.stroke()
-                        context.restoreGState()
-                    }
-                    context.endTransparencyLayer()
-                    context.restoreGState()
-                    UIColor(white: 0.898, alpha: 0.67).setFill()
-                    combinedShape.fill()
-                    context.restoreGState()
-                    
-                    /// Combined Shape (Outline Mask)
-                    context.saveGState()
-                    combinedShape.apply(CGAffineTransform(translationX: 0.66, y: 0.69))
-                    combinedShape.addClip()
-                    
-                    // Empty.
-                    
-                    context.restoreGState()
-                    // End Combined Shape (Outline Mask)
-                    
-                    /// Combined Shape
-                    let combinedShape2 = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 74.65, height: 20.02), cornerRadius: 13)
-                    context.saveGState()
-                    context.translateBy(x: -7, y: -3.44)
-                    UIColor(hue: 0.59, saturation: 0.674, brightness: 0.886, alpha: 1).setFill()
-                    combinedShape2.fill()
-                    context.restoreGState()
-                    
-                    /// Combined Shape (Outline Mask)
-                    context.saveGState()
-                    combinedShape2.apply(CGAffineTransform(translationX: -7, y: -3.44))
-                    combinedShape2.addClip()
-                    
-                    // Empty.
-                    
-                    context.restoreGState()
-                    // End Combined Shape (Outline Mask)
-                    
-                    context.restoreGState()
-                }
-                
-                context.restoreGState()
-            }
-            
-            /// REGISTER
-            let rEGISTER = NSMutableAttributedString(string: "REGISTER")
-            rEGISTER.addAttribute(NSFontAttributeName, value: UIFont(name: "SFProDisplay-Bold", size: 13)!, range: NSRange(location: 0, length: rEGISTER.length))
-            rEGISTER.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: rEGISTER.length))
-            rEGISTER.addAttribute(NSKernAttributeName, value: 0.16, range: NSRange(location: 0, length: rEGISTER.length))
-            context.saveGState()
-            rEGISTER.draw(in: CGRect(x: 0, y: 0.17, width: 62, height: 17))
             context.restoreGState()
             
             context.restoreGState()
@@ -1352,107 +1438,6 @@ class UI: NSObject {
             }
             context.saveGState()
             tEXTTEXTTEXTTEXTTEXT3.draw(in: CGRect(x: 7, y: 201, width: 331.42, height: 317))
-            context.restoreGState()
-            
-            context.restoreGState()
-        }
-        
-        context.restoreGState()
-    }
-    
-    class func drawTAKEATOURPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 292, height: 54), resizing: ResizingBehavior = .aspectFit) {
-        /// General Declarations
-        let context = UIGraphicsGetCurrentContext()!
-        
-        /// Resize to Target Frame
-        context.saveGState()
-        let resizedFrame = resizing.apply(rect: CGRect(x: 0, y: 0, width: 292, height: 54), target: targetFrame)
-        context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
-        context.scaleBy(x: resizedFrame.width / 292, y: resizedFrame.height / 54)
-        let resizedShadowScale: CGFloat = min(resizedFrame.width / 292, resizedFrame.height / 54)
-        
-        /// Group 8
-        do {
-            context.saveGState()
-            
-            /// Group 3
-            do {
-                context.saveGState()
-                
-                /// Group 3
-                context.saveGState()
-                context.setAlpha(0.66)
-                context.beginTransparencyLayer(auxiliaryInfo: nil)
-                do {
-                    context.setShadow(
-                        offset: CGSize(width: 0 * resizedShadowScale, height: 2 * resizedShadowScale),
-                        blur: 9 * resizedShadowScale,
-                        color: UIColor(white: 0, alpha: 0.5).cgColor)
-                    context.beginTransparencyLayer(auxiliaryInfo: nil)
-                    do {
-                        context.translateBy(x: 1.27, y: 0.57)
-                        
-                        /// Oval 2
-                        let oval2 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 52.41, height: 52.41))
-                        context.saveGState()
-                        UIColor.white.setFill()
-                        oval2.fill()
-                        context.restoreGState()
-                        
-                        /// Oval 2
-                        let oval3 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 52.41, height: 52.41))
-                        context.saveGState()
-                        context.translateBy(x: 236.32, y: 0)
-                        UIColor.white.setFill()
-                        oval3.fill()
-                        context.restoreGState()
-                        
-                        /// Rectangle
-                        let rectangle = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 235.83, height: 52.41))
-                        context.saveGState()
-                        context.translateBy(x: 26.2, y: 0)
-                        UIColor.white.setFill()
-                        rectangle.fill()
-                        context.restoreGState()
-                    }
-                    context.endTransparencyLayer()
-                }
-                context.endTransparencyLayer()
-                context.restoreGState()
-                
-                /// Oval 2
-                let oval4 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 53, height: 53))
-                context.saveGState()
-                context.translateBy(x: 0, y: 1)
-                UIColor(white: 0.851, alpha: 1).setFill()
-                oval4.fill()
-                context.restoreGState()
-                
-                /// Oval 2
-                let oval5 = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 53, height: 53))
-                context.saveGState()
-                context.translateBy(x: 239, y: 1)
-                UIColor(white: 0.851, alpha: 1).setFill()
-                oval5.fill()
-                context.restoreGState()
-                
-                /// Rectangle
-                let rectangle2 = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 238.5, height: 53))
-                context.saveGState()
-                context.translateBy(x: 26.5, y: 1)
-                UIColor(white: 0.852, alpha: 1).setFill()
-                rectangle2.fill()
-                context.restoreGState()
-                
-                context.restoreGState()
-            }
-            
-            /// TAKE A TOUR
-            let tAKEATOUR = NSMutableAttributedString(string: "TAKE A TOUR")
-            tAKEATOUR.addAttribute(NSFontAttributeName, value: UIFont(name: "SFProDisplay-Bold", size: 20)!, range: NSRange(location: 0, length: tAKEATOUR.length))
-            tAKEATOUR.addAttribute(NSKernAttributeName, value: 0.24, range: NSRange(location: 0, length: tAKEATOUR.length))
-            context.saveGState()
-            tAKEATOUR.draw(at: CGPoint(x: 82, y: 14))
             context.restoreGState()
             
             context.restoreGState()
@@ -1683,114 +1668,6 @@ class UI: NSObject {
         context.restoreGState()
     }
     
-    class func drawCancelPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 18), resizing: ResizingBehavior = .aspectFit) {
-        /// General Declarations
-        let context = UIGraphicsGetCurrentContext()!
-        let baseTransform = context.userSpaceToDeviceSpaceTransform.inverted()
-        
-        /// Resize to Target Frame
-        context.saveGState()
-        let resizedFrame = resizing.apply(rect: CGRect(x: 0, y: 0, width: 62, height: 18), target: targetFrame)
-        context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
-        context.scaleBy(x: resizedFrame.width / 62, y: resizedFrame.height / 18)
-        
-        /// Group
-        do {
-            context.saveGState()
-            
-            /// Group 4
-            do {
-                context.saveGState()
-                context.translateBy(x: 0, y: 1)
-                
-                /// Group 2
-                do {
-                    context.saveGState()
-                    
-                    /// Combined Shape
-                    let combinedShape = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 51.2, height: 15.89), cornerRadius: 13)
-                    context.saveGState()
-                    context.translateBy(x: 0.66, y: 0.69)
-                    context.saveGState()
-                    context.beginPath()
-                    context.addPath(combinedShape.cgPath)
-                    context.addRect(combinedShape.bounds.insetBy(dx: -46, dy: -46))
-                    context.clip(using: .evenOdd)
-                    context.translateBy(x: -128.2, y: 0)
-                    do {
-                        let baseZero = context.convertToDeviceSpace(CGPoint.zero).applying(baseTransform)
-                        let baseOne = context.convertToDeviceSpace(CGPoint(x: 1, y: 1)).applying(baseTransform)
-                        let baseOffset = context.convertToDeviceSpace(CGPoint(x: 128.2, y: 0)).applying(baseTransform)
-                        let shadowOffset = CGSize(width: baseOffset.x - baseZero.x, height: baseOffset.y - baseZero.y)
-                        let shadowBlur: CGFloat = 16 * min(baseOne.x - baseZero.x, baseOne.y - baseZero.y)
-                        context.setShadow(offset: shadowOffset, blur: shadowBlur, color: UIColor(white: 0.559, alpha: 0.23).cgColor)
-                    }
-                    context.beginTransparencyLayer(auxiliaryInfo: nil)
-                    do {
-                        UIColor.black.setFill()
-                        combinedShape.fill()
-                        context.saveGState()
-                        combinedShape.lineWidth = 6
-                        UIColor.black.setStroke()
-                        combinedShape.stroke()
-                        context.restoreGState()
-                    }
-                    context.endTransparencyLayer()
-                    context.restoreGState()
-                    UIColor(white: 0.898, alpha: 0.67).setFill()
-                    combinedShape.fill()
-                    context.restoreGState()
-                    
-                    /// Combined Shape (Outline Mask)
-                    context.saveGState()
-                    combinedShape.apply(CGAffineTransform(translationX: 0.66, y: 0.69))
-                    combinedShape.addClip()
-                    
-                    // Empty.
-                    
-                    context.restoreGState()
-                    // End Combined Shape (Outline Mask)
-                    
-                    /// Combined Shape
-                    let combinedShape2 = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 67.14, height: 20.02), cornerRadius: 13)
-                    context.saveGState()
-                    context.translateBy(x: -7, y: -3.44)
-                    UIColor(hue: 0.791, saturation: 0.012, brightness: 0.398, alpha: 1).setFill()
-                    combinedShape2.fill()
-                    context.restoreGState()
-                    
-                    /// Combined Shape (Outline Mask)
-                    context.saveGState()
-                    combinedShape2.apply(CGAffineTransform(translationX: -7, y: -3.44))
-                    combinedShape2.addClip()
-                    
-                    // Empty.
-                    
-                    context.restoreGState()
-                    // End Combined Shape (Outline Mask)
-                    
-                    context.restoreGState()
-                }
-                
-                context.restoreGState()
-            }
-            
-            /// CANCEL
-            let cANCEL = NSMutableAttributedString(string: "CANCEL")
-            cANCEL.addAttribute(NSFontAttributeName, value: UIFont(name: "SFProDisplay-Bold", size: 13)!, range: NSRange(location: 0, length: cANCEL.length))
-            cANCEL.addAttribute(NSForegroundColorAttributeName, value: UIColor(white: 0.835, alpha: 1), range: NSRange(location: 0, length: cANCEL.length))
-            cANCEL.addAttribute(NSKernAttributeName, value: 0.16, range: NSRange(location: 0, length: cANCEL.length))
-            context.saveGState()
-            cANCEL.draw(in: CGRect(x: 0, y: 0.17, width: 62, height: 17))
-            context.restoreGState()
-            
-            context.restoreGState()
-        }
-        
-        context.restoreGState()
-    }
-    
-    
     //MARK: - Canvas Images
     
     /// Symbols
@@ -1806,24 +1683,6 @@ class UI: NSObject {
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 62, height: 18), false, 0)
         UI.drawCancel()
-        image = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        LocalCache.image = image
-        return image
-    }
-    
-    class func imageOfGlyphs_GuidesSizeGuideNavigationBarAndToolbar() -> UIImage {
-        struct LocalCache {
-            static var image: UIImage!
-        }
-        if LocalCache.image != nil {
-            return LocalCache.image
-        }
-        var image: UIImage
-        
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 28, height: 28), false, 0)
-        UI.drawGlyphs_GuidesSizeGuideNavigationBarAndToolbar()
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1932,24 +1791,6 @@ class UI: NSObject {
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 21, height: 21), false, 0)
         UI.drawButtonBlackPressed()
-        image = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        LocalCache.image = image
-        return image
-    }
-    
-    class func imageOfGlyphsNavigationOrToolbarPlaceholder1OnLight() -> UIImage {
-        struct LocalCache {
-            static var image: UIImage!
-        }
-        if LocalCache.image != nil {
-            return LocalCache.image
-        }
-        var image: UIImage
-        
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 28, height: 28), false, 0)
-        UI.drawGlyphsNavigationOrToolbarPlaceholder1OnLight()
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -2118,7 +1959,6 @@ class UI: NSObject {
         LocalCache.image = image
         return image
     }
-    
     
     //MARK: - Resizing Behavior
     
