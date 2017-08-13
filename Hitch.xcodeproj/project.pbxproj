@@ -17,12 +17,12 @@
 		BD25F3D01F21E65F000B5487 /* SFProDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BD25F3CF1F21E65F000B5487 /* SFProDisplay-Bold.otf */; };
 		BD44B1D41F1F5268008324C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44B1D31F1F5268008324C2 /* AppDelegate.swift */; };
 		BD44B1D61F1F5268008324C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44B1D51F1F5268008324C2 /* ViewController.swift */; };
-		BD44B1D91F1F5268008324C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD44B1D71F1F5268008324C2 /* Main.storyboard */; };
 		BD44B1DB1F1F5268008324C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD44B1DA1F1F5268008324C2 /* Assets.xcassets */; };
 		BD44B1DE1F1F5268008324C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD44B1DC1F1F5268008324C2 /* LaunchScreen.storyboard */; };
 		BD44B2051F21D4BA008324C2 /* BlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44B2041F21D4BA008324C2 /* BlackButton.swift */; };
 		BD44B2071F21DACF008324C2 /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44B2061F21DACF008324C2 /* WhiteButton.swift */; };
 		BD5792CC1F40248300E4AC30 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5792CB1F40248300E4AC30 /* UI.swift */; };
+		BD5792D11F402BF100E4AC30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD5792CF1F402BF100E4AC30 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,6 @@
 		BD44B1D01F1F5268008324C2 /* Hitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD44B1D31F1F5268008324C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD44B1D51F1F5268008324C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BD44B1D81F1F5268008324C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD44B1DA1F1F5268008324C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD44B1DD1F1F5268008324C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD44B1DF1F1F5268008324C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		BD44B2041F21D4BA008324C2 /* BlackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackButton.swift; sourceTree = "<group>"; };
 		BD44B2061F21DACF008324C2 /* WhiteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
 		BD5792CB1F40248300E4AC30 /* UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
+		BD5792D01F402BF100E4AC30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBD1AAC53FBF28FEB3E7D873 /* Pods-Hitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hitch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hitch/Pods-Hitch.release.xcconfig"; sourceTree = "<group>"; };
 		DE07EE5180C4CB9D3FA9B7AA /* libPods-Hitch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hitch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -96,8 +96,8 @@
 			children = (
 				BD44B1D31F1F5268008324C2 /* AppDelegate.swift */,
 				BD44B1D51F1F5268008324C2 /* ViewController.swift */,
-				BD44B1D71F1F5268008324C2 /* Main.storyboard */,
 				BD44B1DA1F1F5268008324C2 /* Assets.xcassets */,
+				BD5792CF1F402BF100E4AC30 /* Main.storyboard */,
 				BD44B1DC1F1F5268008324C2 /* LaunchScreen.storyboard */,
 				BD44B1DF1F1F5268008324C2 /* Info.plist */,
 				BD44B1EB1F209728008324C2 /* Hitch-Bridging-Header.h */,
@@ -199,7 +199,7 @@
 				BD44B1DE1F1F5268008324C2 /* LaunchScreen.storyboard in Resources */,
 				BD44B1DB1F1F5268008324C2 /* Assets.xcassets in Resources */,
 				BD25F3D01F21E65F000B5487 /* SFProDisplay-Bold.otf in Resources */,
-				BD44B1D91F1F5268008324C2 /* Main.storyboard in Resources */,
+				BD5792D11F402BF100E4AC30 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,20 +275,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BD44B1D71F1F5268008324C2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BD44B1D81F1F5268008324C2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BD44B1DC1F1F5268008324C2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BD44B1DD1F1F5268008324C2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BD5792CF1F402BF100E4AC30 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD5792D01F402BF100E4AC30 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -18,7 +18,7 @@ class User: NSObject {
     var registeredEvent:[Event]!
     var joinedEvent:[Event]!
     var postedEvent:[Event]!
-    func getid()->String!{
+    /*func getid()->String!{
         }
     func getname()->String!{
         }
@@ -48,4 +48,5 @@ class User: NSObject {
         }
     func setpostedEvent(_ t:[Event]){
         }
+ */
 }

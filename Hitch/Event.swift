@@ -17,7 +17,7 @@ class Event: NSObject {
     var location:Double!
     var sponser:[User]!
     var participant:[User]!
-    func getName()->String!{
+    /*func getName()->String!{
     }
     func getid()->String!{
     }
@@ -44,5 +44,5 @@ class Event: NSObject {
     func getsponser()->[User]!{
     }
     func getparticipant()->[User]!{
-    }
+    }*/
 }
