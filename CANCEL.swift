@@ -12,8 +12,8 @@ import UIKit
 class CANCEL: UIButton {
     
     private func myInit() {
-        self.setImage(UIKit.imageOfCancel(), for: .normal)
-        self.setImage(UIKit.imageOfCancelPressed(), for: .focused)
+        self.setImage(UI.imageOfCancel(), for: .normal)
+        self.setImage(UI.imageOfCancelPressed(), for: .focused)
     }
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -26,6 +26,6 @@ class CANCEL: UIButton {
     }
     
     override func draw(_ rect: CGRect) {
-        UIKit.drawCancel(frame: self.bounds, resizing: .center)
+        UI.drawCancel(frame: self.bounds, resizing: .center)
     }
 }

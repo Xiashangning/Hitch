@@ -12,8 +12,8 @@ import UIKit
 class WhiteButton: UIButton {
     
     private func myInit() {
-        self.setImage(UIKit.imageOfButtonWhite(), for: .normal)
-        self.setImage(UIKit.imageOfButtonWhitePressed(), for: .focused)
+        self.setImage(UI.imageOfButtonWhite(), for: .normal)
+        self.setImage(UI.imageOfButtonWhitePressed(), for: .focused)
     }
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -26,6 +26,6 @@ class WhiteButton: UIButton {
     }
     
     override func draw(_ rect: CGRect) {
-        UIKit.drawButtonWhite(frame: self.bounds, resizing: .center)
+        UI.drawButtonWhite(frame: self.bounds, resizing: .center)
     }
 }

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		386520B5D9752DD463758155 /* libPods-Hitch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE07EE5180C4CB9D3FA9B7AA /* libPods-Hitch.a */; };
 		7165762E1F3EE104002A7CDB /* LOGIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7165762D1F3EE104002A7CDB /* LOGIN.swift */; };
-		716576321F3EE40D002A7CDB /* UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716576311F3EE40D002A7CDB /* UIKit.swift */; };
 		716576341F3EE588002A7CDB /* TakeATour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716576331F3EE588002A7CDB /* TakeATour.swift */; };
 		716576361F3EE5DF002A7CDB /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716576351F3EE5DF002A7CDB /* Register.swift */; };
 		716576381F3EE686002A7CDB /* CANCEL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716576371F3EE686002A7CDB /* CANCEL.swift */; };
@@ -23,11 +22,11 @@
 		BD44B1DE1F1F5268008324C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD44B1DC1F1F5268008324C2 /* LaunchScreen.storyboard */; };
 		BD44B2051F21D4BA008324C2 /* BlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44B2041F21D4BA008324C2 /* BlackButton.swift */; };
 		BD44B2071F21DACF008324C2 /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44B2061F21DACF008324C2 /* WhiteButton.swift */; };
+		BD5792CC1F40248300E4AC30 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5792CB1F40248300E4AC30 /* UI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7165762D1F3EE104002A7CDB /* LOGIN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LOGIN.swift; sourceTree = "<group>"; };
-		716576311F3EE40D002A7CDB /* UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKit.swift; sourceTree = "<group>"; };
 		716576331F3EE588002A7CDB /* TakeATour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeATour.swift; sourceTree = "<group>"; };
 		716576351F3EE5DF002A7CDB /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		716576371F3EE686002A7CDB /* CANCEL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CANCEL.swift; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		BD44B1EB1F209728008324C2 /* Hitch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hitch-Bridging-Header.h"; sourceTree = "<group>"; };
 		BD44B2041F21D4BA008324C2 /* BlackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackButton.swift; sourceTree = "<group>"; };
 		BD44B2061F21DACF008324C2 /* WhiteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
+		BD5792CB1F40248300E4AC30 /* UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 		CBD1AAC53FBF28FEB3E7D873 /* Pods-Hitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hitch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hitch/Pods-Hitch.release.xcconfig"; sourceTree = "<group>"; };
 		DE07EE5180C4CB9D3FA9B7AA /* libPods-Hitch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hitch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -120,8 +120,8 @@
 		BD44B2011F21CBE2008324C2 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BD5792CB1F40248300E4AC30 /* UI.swift */,
 				BD25F3CF1F21E65F000B5487 /* SFProDisplay-Bold.otf */,
-				716576311F3EE40D002A7CDB /* UIKit.swift */,
 				BD44B2041F21D4BA008324C2 /* BlackButton.swift */,
 				BD44B2061F21DACF008324C2 /* WhiteButton.swift */,
 				7165762D1F3EE104002A7CDB /* LOGIN.swift */,
@@ -260,11 +260,11 @@
 			files = (
 				BD44B1D61F1F5268008324C2 /* ViewController.swift in Sources */,
 				71BEEB7A1F3EEBC4000C0F15 /* Event.swift in Sources */,
+				BD5792CC1F40248300E4AC30 /* UI.swift in Sources */,
 				716576341F3EE588002A7CDB /* TakeATour.swift in Sources */,
 				BD44B2051F21D4BA008324C2 /* BlackButton.swift in Sources */,
 				7165762E1F3EE104002A7CDB /* LOGIN.swift in Sources */,
 				716576381F3EE686002A7CDB /* CANCEL.swift in Sources */,
-				716576321F3EE40D002A7CDB /* UIKit.swift in Sources */,
 				BD44B1D41F1F5268008324C2 /* AppDelegate.swift in Sources */,
 				716576361F3EE5DF002A7CDB /* Register.swift in Sources */,
 				71BEEB781F3EEB5C000C0F15 /* User.swift in Sources */,

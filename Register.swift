@@ -12,8 +12,8 @@ import UIKit
 class Register: UIButton {
     
     private func myInit() {
-        self.setImage(UIKit.imageOfRegister2(), for: .normal)
-        self.setImage(UIKit.imageOfRegisterPressed(), for: .focused)
+        self.setImage(UI.imageOfRegister2(), for: .normal)
+        self.setImage(UI.imageOfRegisterPressed(), for: .focused)
     }
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -26,7 +26,7 @@ class Register: UIButton {
     }
     
     override func draw(_ rect: CGRect) {
-        UIKit.drawRegister2(frame: self.bounds, resizing: .center)
+        UI.drawRegister2(frame: self.bounds, resizing: .center)
     }
 }
 

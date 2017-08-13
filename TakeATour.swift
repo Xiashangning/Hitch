@@ -12,8 +12,8 @@ import UIKit
 class TakeATour: UIButton {
     
     private func myInit() {
-        self.setImage(UIKit.imageOfTAKEATOUR(), for: .normal)
-        self.setImage(UIKit.imageOfTAKEATOURPressed(), for: .focused)
+        self.setImage(UI.imageOfTAKEATOUR(), for: .normal)
+        self.setImage(UI.imageOfTAKEATOURPressed(), for: .focused)
     }
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -26,6 +26,6 @@ class TakeATour: UIButton {
     }
     
     override func draw(_ rect: CGRect) {
-        UIKit.drawTAKEATOUR(frame: self.bounds, resizing: .center)
+        UI.drawTAKEATOUR(frame: self.bounds, resizing: .center)
     }
 }

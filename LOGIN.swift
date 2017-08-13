@@ -13,8 +13,8 @@ import UIKit
 class LOGIN: UIButton {
     
     private func myInit() {
-        self.setImage(UIKit.imageOfLOGIN(), for: .normal)
-        self.setImage(UIKit.imageOfLOGINPressed(), for: .focused)
+        self.setImage(UI.imageOfLOGIN(), for: .normal)
+        self.setImage(UI.imageOfLOGINPressed(), for: .focused)
     }
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -27,6 +27,6 @@ class LOGIN: UIButton {
     }
     
     override func draw(_ rect: CGRect) {
-        UIKit.drawLOGIN(frame: self.bounds, resizing: .center)
+        UI.drawLOGIN(frame: self.bounds, resizing: .center)
     }
 }
