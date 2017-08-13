@@ -1,19 +1,19 @@
 //
-//  WhiteButton.swift
+//  TakeATour.swift
 //  Hitch
 //
-//  Created by ios11 on 2017/7/21.
-//  Copyright © 2017年 geek. All rights reserved.
+//  Created by Oliver Lau on 8/12/17.
+//  Copyright © 2017 geek. All rights reserved.
 //
 
 import UIKit
 
 @IBDesignable
-class WhiteButton: UIButton {
+class TakeATour: UIButton {
     
     private func myInit() {
-        self.setImage(UI.imageOfButtonWhite(), for: .normal)
-        self.setImage(UI.imageOfButtonWhitePressed(), for: .focused)
+        self.setImage(UI.imageOfTAKEATOUR(), for: .normal)
+        self.setImage(UI.imageOfTAKEATOURPressed(), for: .focused)
     }
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -26,6 +26,6 @@ class WhiteButton: UIButton {
     }
     
     override func draw(_ rect: CGRect) {
-        UI.drawButtonWhite(frame: self.bounds, resizing: .center)
+        UI.drawTAKEATOUR(frame: self.bounds, resizing: .center)
     }
 }

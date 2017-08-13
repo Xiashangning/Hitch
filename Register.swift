@@ -1,19 +1,19 @@
 //
-//  WhiteButton.swift
+//  Register.swift
 //  Hitch
 //
-//  Created by ios11 on 2017/7/21.
-//  Copyright © 2017年 geek. All rights reserved.
+//  Created by Oliver Lau on 8/12/17.
+//  Copyright © 2017 geek. All rights reserved.
 //
 
 import UIKit
 
 @IBDesignable
-class WhiteButton: UIButton {
+class Register: UIButton {
     
     private func myInit() {
-        self.setImage(UI.imageOfButtonWhite(), for: .normal)
-        self.setImage(UI.imageOfButtonWhitePressed(), for: .focused)
+        self.setImage(UI.imageOfRegister2(), for: .normal)
+        self.setImage(UI.imageOfRegisterPressed(), for: .focused)
     }
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -26,6 +26,7 @@ class WhiteButton: UIButton {
     }
     
     override func draw(_ rect: CGRect) {
-        UI.drawButtonWhite(frame: self.bounds, resizing: .center)
+        UI.drawRegister2(frame: self.bounds, resizing: .center)
     }
 }
+
