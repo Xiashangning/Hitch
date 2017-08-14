@@ -9,7 +9,15 @@
 
 import UIKit
 
-
+func *(_ frame: CGRect, _ scale: CGFloat) -> CGRect {
+    var f = frame
+    f.origin.x += (1-scale)*f.size.width/2
+    f.origin.y += (1-scale)*f.size.height/2
+    f.size.width *= scale
+    f.size.height *= scale
+    
+    return f
+}
 
 class UI: NSObject {
     
