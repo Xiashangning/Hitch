@@ -31,7 +31,6 @@
 		BD5792E11F40370700E4AC30 /* mostviewed_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5792DD1F40370700E4AC30 /* mostviewed_2x.png */; };
 		BD5792E21F40370700E4AC30 /* compose_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5792DE1F40370700E4AC30 /* compose_2x.png */; };
 		BD5792E31F40370700E4AC30 /* map_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5792DF1F40370700E4AC30 /* map_2x.png */; };
-		BD5792E71F405DA900E4AC30 /* Icon-App-76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5792E61F405DA900E4AC30 /* Icon-App-76x76@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,7 +63,6 @@
 		BD5792DD1F40370700E4AC30 /* mostviewed_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mostviewed_2x.png; sourceTree = "<group>"; };
 		BD5792DE1F40370700E4AC30 /* compose_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compose_2x.png; sourceTree = "<group>"; };
 		BD5792DF1F40370700E4AC30 /* map_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_2x.png; sourceTree = "<group>"; };
-		BD5792E61F405DA900E4AC30 /* Icon-App-76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@2x.png"; sourceTree = "<group>"; };
 		CBD1AAC53FBF28FEB3E7D873 /* Pods-Hitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hitch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hitch/Pods-Hitch.release.xcconfig"; sourceTree = "<group>"; };
 		DE07EE5180C4CB9D3FA9B7AA /* libPods-Hitch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hitch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -118,7 +116,6 @@
 				BD5792DC1F40370700E4AC30 /* contacts_2x.png */,
 				BD5792DD1F40370700E4AC30 /* mostviewed_2x.png */,
 				BD5792DE1F40370700E4AC30 /* compose_2x.png */,
-				BD5792E61F405DA900E4AC30 /* Icon-App-76x76@2x.png */,
 				BD5792DF1F40370700E4AC30 /* map_2x.png */,
 				BD5792CF1F402BF100E4AC30 /* Main.storyboard */,
 				BD44B1DC1F1F5268008324C2 /* LaunchScreen.storyboard */,
@@ -225,7 +222,6 @@
 			files = (
 				BD44B1DE1F1F5268008324C2 /* LaunchScreen.storyboard in Resources */,
 				BD44B1DB1F1F5268008324C2 /* Assets.xcassets in Resources */,
-				BD5792E71F405DA900E4AC30 /* Icon-App-76x76@2x.png in Resources */,
 				BD5792E11F40370700E4AC30 /* mostviewed_2x.png in Resources */,
 				BD5792E01F40370700E4AC30 /* contacts_2x.png in Resources */,
 				BD25F3D01F21E65F000B5487 /* SFProDisplay-Bold.otf in Resources */,
