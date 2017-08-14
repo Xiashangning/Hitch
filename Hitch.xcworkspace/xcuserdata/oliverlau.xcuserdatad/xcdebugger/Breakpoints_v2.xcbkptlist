@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1940"
             endingLineNumber = "1940"
-            landmarkName = "imageOfWindowDark()"
+            landmarkName = "imageOfWindowDark(frame:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

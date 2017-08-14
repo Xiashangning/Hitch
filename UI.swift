@@ -1672,7 +1672,7 @@ class UI: NSObject {
     
     /// Symbols
     
-    class func imageOfCancel(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 18) -> UIImage {
+    class func imageOfCancel(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 18), resizing: ResizingBehavior = .aspectFit) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1690,7 +1690,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfWindowLight3(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 344, height: 113) -> UIImage {
+    class func imageOfWindowLight3(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 344, height: 113), resizing: ResizingBehavior = .aspectFit) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1708,7 +1708,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfRegisterPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 21) -> UIImage {
+    class func imageOfRegisterPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 21), resizing: ResizingBehavior = .aspectFit) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1726,7 +1726,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfWindowLight2(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 344, height: 113) -> UIImage {
+    class func imageOfWindowLight2(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 344, height: 113), resizing: ResizingBehavior = .aspectFit) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1744,7 +1744,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfLOGINPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 292, height: 54) -> UIImage {
+    class func imageOfLOGINPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 292, height: 54), resizing: ResizingBehavior = .aspectFit) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1762,7 +1762,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfButtonWhitePressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 21, height: 21) -> UIImage {
+    class func imageOfButtonWhitePressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 21, height: 21), resizing: ResizingBehavior = .aspectFit) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1780,7 +1780,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfButtonBlackPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 21, height: 21) -> UIImage {
+    class func imageOfButtonBlackPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 21, height: 21), resizing: ResizingBehavior = .aspectFit) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1798,7 +1798,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfButtonWhite(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 21, height: 21) -> UIImage {
+    class func imageOfButtonWhite(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 21, height: 21), resizing: ResizingBehavior = .aspectFit) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1816,7 +1816,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfTAKEATOUR(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 292, height: 54) -> UIImage {
+    class func imageOfTAKEATOUR(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 292, height: 54), resizing: ResizingBehavior = .aspectFit) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1834,7 +1834,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfLOGIN(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 292, height: 54) -> UIImage {
+    class func imageOfLOGIN(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 292, height: 54), resizing: ResizingBehavior = .aspectFit) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1852,7 +1852,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfRegister2(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 18) -> UIImage {
+    class func imageOfRegister2(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 18), resizing: ResizingBehavior = .aspectFit) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1870,7 +1870,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfWindowLight(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 352, height: 577) -> UIImage {
+    class func imageOfWindowLight(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 352, height: 577), resizing: ResizingBehavior = .aspectFit) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1888,7 +1888,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfTAKEATOURPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 292, height: 54) -> UIImage {
+    class func imageOfTAKEATOURPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 292, height: 54), resizing: ResizingBehavior = .aspectFit) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1906,7 +1906,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfButtonBlack(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 21, height: 21) -> UIImage {
+    class func imageOfButtonBlack(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 21, height: 21), resizing: ResizingBehavior = .aspectFit) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1924,7 +1924,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfWindowDark(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 352, height: 577) -> UIImage {
+    class func imageOfWindowDark(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 352, height: 577), resizing: ResizingBehavior = .aspectFit) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1942,7 +1942,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfCancelPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 18) -> UIImage {
+    class func imageOfCancelPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 18), resizing: ResizingBehavior = .aspectFit) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
