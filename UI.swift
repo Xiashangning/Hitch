@@ -1680,7 +1680,7 @@ class UI: NSObject {
     
     /// Symbols
     
-    class func imageOfCancel(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 18), resizing: ResizingBehavior = .aspectFit) -> UIImage {
+    class func imageOfCancel(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 18), resizing: ResizingBehavior = .aspectFit, scale: CGFloat = 1) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1689,8 +1689,8 @@ class UI: NSObject {
         }
         var image: UIImage
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 62, height: 18), false, 0)
-        UI.drawCancel(frame: targetFrame, resizing: resizing)
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: targetFrame.size.width, height: targetFrame.size.height), false, 0)
+        UI.drawCancel(frame: targetFrame * scale, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1698,7 +1698,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfWindowLight3(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 344, height: 113), resizing: ResizingBehavior = .aspectFit) -> UIImage {
+    class func imageOfWindowLight3(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 344, height: 113), resizing: ResizingBehavior = .aspectFit, scale: CGFloat = 1) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1707,8 +1707,8 @@ class UI: NSObject {
         }
         var image: UIImage
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 344, height: 113), false, 0)
-        UI.drawWindowLight3(frame: targetFrame, resizing: resizing)
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: targetFrame.size.width, height: targetFrame.size.height), false, 0)
+        UI.drawWindowLight3(frame: targetFrame * scale, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1716,7 +1716,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfRegisterPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 21), resizing: ResizingBehavior = .aspectFit) -> UIImage {
+    class func imageOfRegisterPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 21), resizing: ResizingBehavior = .aspectFit, scale: CGFloat = 1) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1725,8 +1725,8 @@ class UI: NSObject {
         }
         var image: UIImage
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 62, height: 21), false, 0)
-        UI.drawRegisterPressed(frame: targetFrame, resizing: resizing)
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: targetFrame.size.width, height: targetFrame.size.height), false, 0)
+        UI.drawRegisterPressed(frame: targetFrame * scale, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1734,7 +1734,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfWindowLight2(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 344, height: 113), resizing: ResizingBehavior = .aspectFit) -> UIImage {
+    class func imageOfWindowLight2(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 344, height: 113), resizing: ResizingBehavior = .aspectFit, scale: CGFloat = 1) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1743,8 +1743,8 @@ class UI: NSObject {
         }
         var image: UIImage
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 344, height: 113), false, 0)
-        UI.drawWindowLight2(frame: targetFrame, resizing: resizing)
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: targetFrame.size.width, height: targetFrame.size.height), false, 0)
+        UI.drawWindowLight2(frame: targetFrame * scale, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1752,7 +1752,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfLOGINPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 292, height: 54), resizing: ResizingBehavior = .aspectFit) -> UIImage {
+    class func imageOfLOGINPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 292, height: 54), resizing: ResizingBehavior = .aspectFit, scale: CGFloat = 1) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1761,8 +1761,8 @@ class UI: NSObject {
         }
         var image: UIImage
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 292, height: 54), false, 0)
-        UI.drawLOGINPressed(frame: targetFrame, resizing: resizing)
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: targetFrame.size.width, height: targetFrame.size.height), false, 0)
+        UI.drawLOGINPressed(frame: targetFrame * scale, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1770,7 +1770,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfButtonWhitePressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 21, height: 21), resizing: ResizingBehavior = .aspectFit) -> UIImage {
+    class func imageOfButtonWhitePressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 21, height: 21), resizing: ResizingBehavior = .aspectFit, scale: CGFloat = 1) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1779,8 +1779,8 @@ class UI: NSObject {
         }
         var image: UIImage
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 21, height: 21), false, 0)
-        UI.drawButtonWhitePressed(frame: targetFrame, resizing: resizing)
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: targetFrame.size.width, height: targetFrame.size.height), false, 0)
+        UI.drawButtonWhitePressed(frame: targetFrame * scale, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1788,7 +1788,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfButtonBlackPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 21, height: 21), resizing: ResizingBehavior = .aspectFit) -> UIImage {
+    class func imageOfButtonBlackPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 21, height: 21), resizing: ResizingBehavior = .aspectFit, scale: CGFloat = 1) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1797,8 +1797,8 @@ class UI: NSObject {
         }
         var image: UIImage
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 21, height: 21), false, 0)
-        UI.drawButtonBlackPressed(frame: targetFrame, resizing: resizing)
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: targetFrame.size.width, height: targetFrame.size.height), false, 0)
+        UI.drawButtonBlackPressed(frame: targetFrame * scale, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1806,7 +1806,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfButtonWhite(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 21, height: 21), resizing: ResizingBehavior = .aspectFit) -> UIImage {
+    class func imageOfButtonWhite(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 21, height: 21), resizing: ResizingBehavior = .aspectFit, scale: CGFloat = 1) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1815,8 +1815,8 @@ class UI: NSObject {
         }
         var image: UIImage
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 21, height: 21), false, 0)
-        UI.drawButtonWhite(frame: targetFrame, resizing: resizing)
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: targetFrame.size.width, height: targetFrame.size.height), false, 0)
+        UI.drawButtonWhite(frame: targetFrame * scale, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1824,7 +1824,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfTAKEATOUR(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 292, height: 54), resizing: ResizingBehavior = .aspectFit) -> UIImage {
+    class func imageOfTAKEATOUR(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 292, height: 54), resizing: ResizingBehavior = .aspectFit, scale: CGFloat = 1) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1833,8 +1833,8 @@ class UI: NSObject {
         }
         var image: UIImage
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 292, height: 54), false, 0)
-        UI.drawTAKEATOUR(frame: targetFrame, resizing: resizing)
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: targetFrame.size.width, height: targetFrame.size.height), false, 0)
+        UI.drawTAKEATOUR(frame: targetFrame * scale, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1842,7 +1842,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfLOGIN(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 292, height: 54), resizing: ResizingBehavior = .aspectFit) -> UIImage {
+    class func imageOfLOGIN(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 292, height: 54), resizing: ResizingBehavior = .aspectFit, scale: CGFloat = 1) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1851,8 +1851,8 @@ class UI: NSObject {
         }
         var image: UIImage
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 292, height: 54), false, 0)
-        UI.drawLOGIN(frame: targetFrame, resizing: resizing)
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: targetFrame.size.width, height: targetFrame.size.height), false, 0)
+        UI.drawLOGIN(frame: targetFrame * scale, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1860,7 +1860,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfRegister2(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 18), resizing: ResizingBehavior = .aspectFit) -> UIImage {
+    class func imageOfRegister2(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 18), resizing: ResizingBehavior = .aspectFit, scale: CGFloat = 1) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1869,8 +1869,8 @@ class UI: NSObject {
         }
         var image: UIImage
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 62, height: 18), false, 0)
-        UI.drawRegister2(frame: targetFrame, resizing: resizing)
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: targetFrame.size.width, height: targetFrame.size.height), false, 0)
+        UI.drawRegister2(frame: targetFrame * scale, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1878,7 +1878,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfWindowLight(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 352, height: 577), resizing: ResizingBehavior = .aspectFit) -> UIImage {
+    class func imageOfWindowLight(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 352, height: 577), resizing: ResizingBehavior = .aspectFit, scale: CGFloat = 1) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1887,8 +1887,8 @@ class UI: NSObject {
         }
         var image: UIImage
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 352, height: 577), false, 0)
-        UI.drawWindowLight(frame: targetFrame, resizing: resizing)
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: targetFrame.size.width, height: targetFrame.size.height), false, 0)
+        UI.drawWindowLight(frame: targetFrame * scale, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1896,7 +1896,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfTAKEATOURPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 292, height: 54), resizing: ResizingBehavior = .aspectFit) -> UIImage {
+    class func imageOfTAKEATOURPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 292, height: 54), resizing: ResizingBehavior = .aspectFit, scale: CGFloat = 1) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1905,8 +1905,8 @@ class UI: NSObject {
         }
         var image: UIImage
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 292, height: 54), false, 0)
-        UI.drawTAKEATOURPressed(frame: targetFrame, resizing: resizing)
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: targetFrame.size.width, height: targetFrame.size.height), false, 0)
+        UI.drawTAKEATOURPressed(frame: targetFrame * scale, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1914,7 +1914,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfButtonBlack(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 21, height: 21), resizing: ResizingBehavior = .aspectFit) -> UIImage {
+    class func imageOfButtonBlack(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 21, height: 21), resizing: ResizingBehavior = .aspectFit, scale: CGFloat = 1) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1923,8 +1923,8 @@ class UI: NSObject {
         }
         var image: UIImage
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 21, height: 21), false, 0)
-        UI.drawButtonBlack(frame: targetFrame, resizing: resizing)
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: targetFrame.size.width, height: targetFrame.size.height), false, 0)
+        UI.drawButtonBlack(frame: targetFrame * scale, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1932,7 +1932,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfWindowDark(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 352, height: 577), resizing: ResizingBehavior = .aspectFit) -> UIImage {
+    class func imageOfWindowDark(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 352, height: 577), resizing: ResizingBehavior = .aspectFit, scale: CGFloat = 1) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1941,8 +1941,8 @@ class UI: NSObject {
         }
         var image: UIImage
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 352, height: 577), false, 0)
-        UI.drawWindowDark(frame: targetFrame, resizing: resizing)
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: targetFrame.size.width, height: targetFrame.size.height), false, 0)
+        UI.drawWindowDark(frame: targetFrame * scale, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1950,7 +1950,7 @@ class UI: NSObject {
         return image
     }
     
-    class func imageOfCancelPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 18), resizing: ResizingBehavior = .aspectFit) -> UIImage {
+    class func imageOfCancelPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 18), resizing: ResizingBehavior = .aspectFit, scale: CGFloat = 1) -> UIImage {
         struct LocalCache {
             static var image: UIImage!
         }
@@ -1959,8 +1959,8 @@ class UI: NSObject {
         }
         var image: UIImage
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 62, height: 18), false, 0)
-        UI.drawCancelPressed(frame: targetFrame, resizing: resizing)
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: targetFrame.size.width, height: targetFrame.size.height), false, 0)
+        UI.drawCancelPressed(frame: targetFrame * scale, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         

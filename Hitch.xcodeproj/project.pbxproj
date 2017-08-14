@@ -31,6 +31,8 @@
 		BD5792E21F40370700E4AC30 /* compose_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5792DE1F40370700E4AC30 /* compose_2x.png */; };
 		BD5792E31F40370700E4AC30 /* map_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5792DF1F40370700E4AC30 /* map_2x.png */; };
 		BD5792F51F4173C500E4AC30 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5792F41F4173C500E4AC30 /* UI.swift */; };
+		BD5792F71F41752F00E4AC30 /* IconBlank.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5792F61F41752F00E4AC30 /* IconBlank.png */; };
+		BD5792F91F41962A00E4AC30 /* TimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5792F81F41962A00E4AC30 /* TimeLineView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		BD5792DE1F40370700E4AC30 /* compose_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compose_2x.png; sourceTree = "<group>"; };
 		BD5792DF1F40370700E4AC30 /* map_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_2x.png; sourceTree = "<group>"; };
 		BD5792F41F4173C500E4AC30 /* UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
+		BD5792F61F41752F00E4AC30 /* IconBlank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconBlank.png; sourceTree = "<group>"; };
+		BD5792F81F41962A00E4AC30 /* TimeLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineView.swift; sourceTree = "<group>"; };
 		CBD1AAC53FBF28FEB3E7D873 /* Pods-Hitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hitch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hitch/Pods-Hitch.release.xcconfig"; sourceTree = "<group>"; };
 		DE07EE5180C4CB9D3FA9B7AA /* libPods-Hitch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hitch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -117,6 +121,7 @@
 				BD5792DD1F40370700E4AC30 /* mostviewed_2x.png */,
 				BD5792DE1F40370700E4AC30 /* compose_2x.png */,
 				BD5792DF1F40370700E4AC30 /* map_2x.png */,
+				BD5792F61F41752F00E4AC30 /* IconBlank.png */,
 				BD5792CF1F402BF100E4AC30 /* Main.storyboard */,
 				BD44B1DC1F1F5268008324C2 /* LaunchScreen.storyboard */,
 				BD44B1DF1F1F5268008324C2 /* Info.plist */,
@@ -152,6 +157,7 @@
 				BD5792D41F402EC500E4AC30 /* BlackActivityView.swift */,
 				BD5792D61F402FB200E4AC30 /* WhiteTableCellView.swift */,
 				BD5792D81F402FE600E4AC30 /* BlackTableCellView.swift */,
+				BD5792F81F41962A00E4AC30 /* TimeLineView.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -223,6 +229,7 @@
 				BD44B1DE1F1F5268008324C2 /* LaunchScreen.storyboard in Resources */,
 				BD44B1DB1F1F5268008324C2 /* Assets.xcassets in Resources */,
 				BD5792E11F40370700E4AC30 /* mostviewed_2x.png in Resources */,
+				BD5792F71F41752F00E4AC30 /* IconBlank.png in Resources */,
 				BD5792E01F40370700E4AC30 /* contacts_2x.png in Resources */,
 				BD25F3D01F21E65F000B5487 /* SFProDisplay-Bold.otf in Resources */,
 				BD5792E21F40370700E4AC30 /* compose_2x.png in Resources */,
@@ -301,6 +308,7 @@
 				71BEEB781F3EEB5C000C0F15 /* User.swift in Sources */,
 				BD44B2071F21DACF008324C2 /* WhiteButton.swift in Sources */,
 				BD5792D31F402DEF00E4AC30 /* WhiteActivityView.swift in Sources */,
+				BD5792F91F41962A00E4AC30 /* TimeLineView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

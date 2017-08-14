@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,43 +19,62 @@
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="WcT-LB-am4">
+                    <view key="view" contentMode="scaleToFill" id="kgF-XM-hd8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fdq-Do-hCG">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9XI-UL-iNw">
-                                <rect key="frame" x="77" y="81" width="220" height="220"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HITCH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EQ7-go-PXX">
+                                <rect key="frame" x="95" y="267" width="184" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="220" id="7Qx-Ap-SYx"/>
-                                    <constraint firstAttribute="height" constant="220" id="bMS-jJ-U6u"/>
+                                    <constraint firstAttribute="width" secondItem="EQ7-go-PXX" secondAttribute="height" multiplier="23:8" id="ORJ-ZN-h5Q"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HITCH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXa-HM-SYF">
-                                <rect key="frame" x="96" y="318" width="182" height="68"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="68" id="N94-Xv-ed2"/>
-                                    <constraint firstAttribute="width" constant="182" id="SMs-ct-N0p"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="66"/>
-                                <color key="textColor" red="0.69803921570000005" green="0.25490196079999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="65"/>
+                                <color key="textColor" red="0.69411764710000001" green="0.25882352939999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <size key="shadowOffset" width="3" height="3"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconBlank.png" translatesAutoresizingMaskIntoConstraints="NO" id="ClB-kx-Qfv">
+                                <rect key="frame" x="77" y="47" width="220" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ClB-kx-Qfv" secondAttribute="height" multiplier="1:1" id="7l7-rw-cSy"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="Eul-rW-Uh0"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Q3Q-Tl-R0C"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017 NFLS Geek Club All Rights Reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="srd-yr-JPW">
+                                <rect key="frame" x="84.5" y="638" width="206.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="srd-yr-JPW" secondAttribute="height" multiplier="206:21" id="Hzh-Yf-iPO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="11"/>
+                                <color key="textColor" red="0.69803921570000005" green="0.25490196079999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发现身边的活动" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FAb-OA-lRa">
+                                <rect key="frame" x="110.5" y="601" width="154" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FAb-OA-lRa" secondAttribute="height" multiplier="154:37" id="vRD-gA-nri"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" red="0.69411764710000001" green="0.25882352939999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.96862745100000003" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="fdq-Do-hCG" firstAttribute="leading" secondItem="WcT-LB-am4" secondAttribute="leading" id="Bjv-6b-ypN"/>
-                            <constraint firstItem="9XI-UL-iNw" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="61" id="LnF-JK-iV8"/>
-                            <constraint firstItem="9XI-UL-iNw" firstAttribute="centerX" secondItem="fdq-Do-hCG" secondAttribute="centerX" id="P04-3V-430"/>
-                            <constraint firstItem="9XI-UL-iNw" firstAttribute="centerX" secondItem="UXa-HM-SYF" secondAttribute="centerX" id="VUw-7s-WDw"/>
-                            <constraint firstItem="UXa-HM-SYF" firstAttribute="top" secondItem="9XI-UL-iNw" secondAttribute="bottom" constant="17" id="Vml-5J-GjL"/>
-                            <constraint firstAttribute="trailing" secondItem="fdq-Do-hCG" secondAttribute="trailing" id="lbv-qI-aW3"/>
-                            <constraint firstItem="fdq-Do-hCG" firstAttribute="top" secondItem="WcT-LB-am4" secondAttribute="top" id="vFl-5s-KHq"/>
-                            <constraint firstAttribute="bottom" secondItem="fdq-Do-hCG" secondAttribute="bottom" id="wVR-on-PH0"/>
+                            <constraint firstItem="ClB-kx-Qfv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kgF-XM-hd8" secondAttribute="leadingMargin" constant="61" id="5DW-B1-3Fl"/>
+                            <constraint firstItem="srd-yr-JPW" firstAttribute="top" secondItem="FAb-OA-lRa" secondAttribute="bottom" id="Pim-0O-HFB"/>
+                            <constraint firstItem="EQ7-go-PXX" firstAttribute="top" secondItem="ClB-kx-Qfv" secondAttribute="bottom" id="TMo-TF-H5K"/>
+                            <constraint firstItem="srd-yr-JPW" firstAttribute="centerX" secondItem="kgF-XM-hd8" secondAttribute="centerX" id="Xvr-bL-HYn"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="srd-yr-JPW" secondAttribute="bottom" constant="8" id="aVH-QX-XlQ"/>
+                            <constraint firstItem="EQ7-go-PXX" firstAttribute="centerX" secondItem="ClB-kx-Qfv" secondAttribute="centerX" id="boS-E6-eTx"/>
+                            <constraint firstItem="FAb-OA-lRa" firstAttribute="leading" secondItem="EQ7-go-PXX" secondAttribute="leading" constant="15.5" id="crc-r6-Mpq"/>
+                            <constraint firstItem="FAb-OA-lRa" firstAttribute="leading" secondItem="srd-yr-JPW" secondAttribute="leading" constant="26" id="ksg-Wu-PxU"/>
+                            <constraint firstItem="ClB-kx-Qfv" firstAttribute="centerX" secondItem="kgF-XM-hd8" secondAttribute="centerX" id="luX-xo-mQW"/>
+                            <constraint firstItem="FAb-OA-lRa" firstAttribute="centerX" secondItem="kgF-XM-hd8" secondAttribute="centerX" id="r32-yO-6Ip"/>
+                            <constraint firstItem="EQ7-go-PXX" firstAttribute="leading" secondItem="ClB-kx-Qfv" secondAttribute="leading" constant="18" id="sNv-33-JhP"/>
+                            <constraint firstItem="ClB-kx-Qfv" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="27" id="zxx-7u-tSO"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -63,7 +84,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LaunchScreen.jpg" width="1242" height="2208"/>
-        <image name="icon.jpg" width="650" height="645"/>
+        <image name="IconBlank.png" width="1000" height="1000"/>
     </resources>
 </document>
