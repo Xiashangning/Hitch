@@ -389,7 +389,7 @@
         <scene sceneID="Ema-TF-kg1">
             <objects>
                 <navigationController id="wel-r2-4c2" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eya-nd-H7G">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="eya-nd-H7G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

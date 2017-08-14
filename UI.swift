@@ -1950,7 +1950,11 @@ class UI: NSObject {
         return image
     }
     
+<<<<<<< HEAD
     class func imageOfCancelPressed(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 62, height: 18), resizing: ResizingBehavior = .aspectFit) -> UIImage {
+=======
+    class func imageOfCancelPressed() -> UIImage {
+>>>>>>> parent of 2fbb0d7... Merge pull request #5 from oliver-lau/master
         struct LocalCache {
             static var image: UIImage!
         }
