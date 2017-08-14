@@ -21,7 +21,6 @@
 		BD44B1DE1F1F5268008324C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD44B1DC1F1F5268008324C2 /* LaunchScreen.storyboard */; };
 		BD44B2051F21D4BA008324C2 /* BlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44B2041F21D4BA008324C2 /* BlackButton.swift */; };
 		BD44B2071F21DACF008324C2 /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44B2061F21DACF008324C2 /* WhiteButton.swift */; };
-		BD5792CC1F40248300E4AC30 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5792CB1F40248300E4AC30 /* UI.swift */; };
 		BD5792D11F402BF100E4AC30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD5792CF1F402BF100E4AC30 /* Main.storyboard */; };
 		BD5792D31F402DEF00E4AC30 /* WhiteActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5792D21F402DEF00E4AC30 /* WhiteActivityView.swift */; };
 		BD5792D51F402EC500E4AC30 /* BlackActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5792D41F402EC500E4AC30 /* BlackActivityView.swift */; };
@@ -31,6 +30,7 @@
 		BD5792E11F40370700E4AC30 /* mostviewed_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5792DD1F40370700E4AC30 /* mostviewed_2x.png */; };
 		BD5792E21F40370700E4AC30 /* compose_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5792DE1F40370700E4AC30 /* compose_2x.png */; };
 		BD5792E31F40370700E4AC30 /* map_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5792DF1F40370700E4AC30 /* map_2x.png */; };
+		BD5792F51F4173C500E4AC30 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5792F41F4173C500E4AC30 /* UI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +53,6 @@
 		BD44B1EB1F209728008324C2 /* Hitch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hitch-Bridging-Header.h"; sourceTree = "<group>"; };
 		BD44B2041F21D4BA008324C2 /* BlackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackButton.swift; sourceTree = "<group>"; };
 		BD44B2061F21DACF008324C2 /* WhiteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
-		BD5792CB1F40248300E4AC30 /* UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 		BD5792D01F402BF100E4AC30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD5792D21F402DEF00E4AC30 /* WhiteActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteActivityView.swift; sourceTree = "<group>"; };
 		BD5792D41F402EC500E4AC30 /* BlackActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackActivityView.swift; sourceTree = "<group>"; };
@@ -63,6 +62,7 @@
 		BD5792DD1F40370700E4AC30 /* mostviewed_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mostviewed_2x.png; sourceTree = "<group>"; };
 		BD5792DE1F40370700E4AC30 /* compose_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compose_2x.png; sourceTree = "<group>"; };
 		BD5792DF1F40370700E4AC30 /* map_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_2x.png; sourceTree = "<group>"; };
+		BD5792F41F4173C500E4AC30 /* UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 		CBD1AAC53FBF28FEB3E7D873 /* Pods-Hitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hitch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hitch/Pods-Hitch.release.xcconfig"; sourceTree = "<group>"; };
 		DE07EE5180C4CB9D3FA9B7AA /* libPods-Hitch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hitch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -141,7 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				BD5792D21F402DEF00E4AC30 /* WhiteActivityView.swift */,
-				BD5792CB1F40248300E4AC30 /* UI.swift */,
+				BD5792F41F4173C500E4AC30 /* UI.swift */,
 				BD25F3CF1F21E65F000B5487 /* SFProDisplay-Bold.otf */,
 				BD44B2041F21D4BA008324C2 /* BlackButton.swift */,
 				BD44B2061F21DACF008324C2 /* WhiteButton.swift */,
@@ -289,12 +289,12 @@
 				BD44B1D61F1F5268008324C2 /* ViewController.swift in Sources */,
 				BD5792D71F402FB200E4AC30 /* WhiteTableCellView.swift in Sources */,
 				71BEEB7A1F3EEBC4000C0F15 /* Event.swift in Sources */,
-				BD5792CC1F40248300E4AC30 /* UI.swift in Sources */,
 				BD5792D51F402EC500E4AC30 /* BlackActivityView.swift in Sources */,
 				716576341F3EE588002A7CDB /* TakeATour.swift in Sources */,
 				BD44B2051F21D4BA008324C2 /* BlackButton.swift in Sources */,
 				7165762E1F3EE104002A7CDB /* LOGIN.swift in Sources */,
 				716576381F3EE686002A7CDB /* CANCEL.swift in Sources */,
+				BD5792F51F4173C500E4AC30 /* UI.swift in Sources */,
 				BD44B1D41F1F5268008324C2 /* AppDelegate.swift in Sources */,
 				BD5792D91F402FE600E4AC30 /* BlackTableCellView.swift in Sources */,
 				716576361F3EE5DF002A7CDB /* Register.swift in Sources */,
