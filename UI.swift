@@ -1682,7 +1682,7 @@ class UI: NSObject {
         var image: UIImage
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 62, height: 18), false, 0)
-        UI.drawCancel()
+        UI.drawCancel(frame: targetFrame, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1700,7 +1700,7 @@ class UI: NSObject {
         var image: UIImage
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 344, height: 113), false, 0)
-        UI.drawWindowLight3()
+        UI.drawWindowLight3(frame: targetFrame, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1718,7 +1718,7 @@ class UI: NSObject {
         var image: UIImage
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 62, height: 21), false, 0)
-        UI.drawRegisterPressed()
+        UI.drawRegisterPressed(frame: targetFrame, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1736,7 +1736,7 @@ class UI: NSObject {
         var image: UIImage
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 344, height: 113), false, 0)
-        UI.drawWindowLight2()
+        UI.drawWindowLight2(frame: targetFrame, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1754,7 +1754,7 @@ class UI: NSObject {
         var image: UIImage
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 292, height: 54), false, 0)
-        UI.drawLOGINPressed()
+        UI.drawLOGINPressed(frame: targetFrame, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1772,7 +1772,7 @@ class UI: NSObject {
         var image: UIImage
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 21, height: 21), false, 0)
-        UI.drawButtonWhitePressed()
+        UI.drawButtonWhitePressed(frame: targetFrame, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1790,7 +1790,7 @@ class UI: NSObject {
         var image: UIImage
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 21, height: 21), false, 0)
-        UI.drawButtonBlackPressed()
+        UI.drawButtonBlackPressed(frame: targetFrame, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1808,7 +1808,7 @@ class UI: NSObject {
         var image: UIImage
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 21, height: 21), false, 0)
-        UI.drawButtonWhite()
+        UI.drawButtonWhite(frame: targetFrame, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1826,7 +1826,7 @@ class UI: NSObject {
         var image: UIImage
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 292, height: 54), false, 0)
-        UI.drawTAKEATOUR()
+        UI.drawTAKEATOUR(frame: targetFrame, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1844,7 +1844,7 @@ class UI: NSObject {
         var image: UIImage
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 292, height: 54), false, 0)
-        UI.drawLOGIN()
+        UI.drawLOGIN(frame: targetFrame, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1862,7 +1862,7 @@ class UI: NSObject {
         var image: UIImage
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 62, height: 18), false, 0)
-        UI.drawRegister2()
+        UI.drawRegister2(frame: targetFrame, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1880,7 +1880,7 @@ class UI: NSObject {
         var image: UIImage
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 352, height: 577), false, 0)
-        UI.drawWindowLight()
+        UI.drawWindowLight(frame: targetFrame, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1898,7 +1898,7 @@ class UI: NSObject {
         var image: UIImage
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 292, height: 54), false, 0)
-        UI.drawTAKEATOURPressed()
+        UI.drawTAKEATOURPressed(frame: targetFrame, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1916,7 +1916,7 @@ class UI: NSObject {
         var image: UIImage
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 21, height: 21), false, 0)
-        UI.drawButtonBlack()
+        UI.drawButtonBlack(frame: targetFrame, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1934,7 +1934,7 @@ class UI: NSObject {
         var image: UIImage
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 352, height: 577), false, 0)
-        UI.drawWindowDark()
+        UI.drawWindowDark(frame: targetFrame, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -1952,7 +1952,7 @@ class UI: NSObject {
         var image: UIImage
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 62, height: 18), false, 0)
-        UI.drawCancelPressed()
+        UI.drawCancelPressed(frame: targetFrame, resizing: resizing)
         image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
