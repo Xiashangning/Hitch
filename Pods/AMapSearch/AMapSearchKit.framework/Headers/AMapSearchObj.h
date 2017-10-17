@@ -268,8 +268,8 @@ typedef NS_ENUM(NSInteger, AMapNearbySearchType)
 @property (nonatomic, copy)   NSString *keywords;
 ///是否返回边界坐标，默认NO
 @property (nonatomic, assign) BOOL      requireExtension; 
-///是否显示商圈信息，默认NO。
-@property (nonatomic, assign) BOOL      showBusinessArea; 
+///是否显示商圈信息，默认NO。注：已废弃，行政区划搜索无商圈信息。
+@property (nonatomic, assign) BOOL      showBusinessArea __attribute__((deprecated("已废弃, from 5.3.0")));;
 @end
 
 ///行政区划响应
@@ -387,7 +387,7 @@ typedef NS_ENUM(NSInteger, AMapNearbySearchType)
 @interface AMapRoadTrafficSearchRequest : AMapSearchObject
 ///道路名称，可通过逆地理编码查询获取
 @property (nonatomic, copy)   NSString *roadName;
-///adcode，可通过逆地理编码查询获取
+///城市adcode，可参考http://a.amap.com/lbs/static/zip/AMap_adcode_citycode.zip
 @property (nonatomic, copy)   NSString *adcode;
 ///是否返回扩展信息，默认为 NO
 @property (nonatomic, assign) BOOL requireExtension;

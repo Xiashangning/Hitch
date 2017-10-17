@@ -7,10 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		386520B5D9752DD463758155 /* libPods-Hitch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE07EE5180C4CB9D3FA9B7AA /* libPods-Hitch.a */; };
+		1C4DC9E76C8EF31EAE24B1F6 /* Pods_Hitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17A6AB807EE81CF822FF52D /* Pods_Hitch.framework */; };
 		71BEEB781F3EEB5C000C0F15 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BEEB771F3EEB5C000C0F15 /* User.swift */; };
 		71BEEB7A1F3EEBC4000C0F15 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BEEB791F3EEBC4000C0F15 /* Event.swift */; };
 		BD25F3D01F21E65F000B5487 /* SFProDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BD25F3CF1F21E65F000B5487 /* SFProDisplay-Bold.otf */; };
+		BD2F1FBD1F93125C00989043 /* ButtonProgressBar_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2F1FBE1F93125C00989043 /* ButtonProgressBar_iOS.framework */; };
+		BD2F1FBF1F93125F00989043 /* ChameleonFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2F1FC01F93125F00989043 /* ChameleonFramework.framework */; };
+		BD2F1FC11F93126200989043 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2F1FC21F93126200989043 /* SDWebImage.framework */; };
+		BD2F1FC31F93129400989043 /* Hitch-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = BD44B1EB1F209728008324C2 /* Hitch-Bridging-Header.h */; };
+		BD2F1FC41F95C0E200989043 /* ASIHTTPRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2F1FC51F95C0E200989043 /* ASIHTTPRequest.framework */; };
+		BD2F1FC61F95C0E600989043 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2F1FC71F95C0E600989043 /* Reachability.framework */; };
+		BD2F1FC91F96374A00989043 /* MyMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F1FC81F96374A00989043 /* MyMapView.swift */; };
 		BD44B1D41F1F5268008324C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44B1D31F1F5268008324C2 /* AppDelegate.swift */; };
 		BD44B1D61F1F5268008324C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44B1D51F1F5268008324C2 /* ViewController.swift */; };
 		BD44B1DB1F1F5268008324C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD44B1DA1F1F5268008324C2 /* Assets.xcassets */; };
@@ -27,6 +34,8 @@
 		BD8514C21F8E2F3600DA4971 /* StartingButtonLightPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8514C01F8E2F0F00DA4971 /* StartingButtonLightPressed.png */; };
 		BD8514C31F8E2F3900DA4971 /* StartingButtonLight.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8514C11F8E2F0F00DA4971 /* StartingButtonLight.png */; };
 		BD8514C51F8E3A2C00DA4971 /* textbg.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8514C41F8E2FC800DA4971 /* textbg.png */; };
+		BD8514C71F91A12B00DA4971 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8514C61F91A12B00DA4971 /* LoginViewController.swift */; };
+		BD8514CC1F91A24300DA4971 /* HitchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8514CB1F91A24300DA4971 /* HitchManager.swift */; };
 		BDAB00D81F8CE6B900CBDEF8 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAB00D71F8CE6B900CBDEF8 /* LargeButton.swift */; };
 		BDAB00E41F8D09C100CBDEF8 /* Button-Dark-Pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = BDAB00D11F8CE11B00CBDEF8 /* Button-Dark-Pressed.png */; };
 		BDAB00E51F8D09C100CBDEF8 /* Button-Dark.png in Resources */ = {isa = PBXBuildFile; fileRef = BDAB00D61F8CE11E00CBDEF8 /* Button-Dark.png */; };
@@ -44,6 +53,12 @@
 		71BEEB791F3EEBC4000C0F15 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		97B6382E04D54A7FDE38AFE4 /* Pods-Hitch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hitch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hitch/Pods-Hitch.debug.xcconfig"; sourceTree = "<group>"; };
 		BD25F3CF1F21E65F000B5487 /* SFProDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.otf"; sourceTree = "<group>"; };
+		BD2F1FBE1F93125C00989043 /* ButtonProgressBar_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ButtonProgressBar_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD2F1FC01F93125F00989043 /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD2F1FC21F93126200989043 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD2F1FC51F95C0E200989043 /* ASIHTTPRequest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ASIHTTPRequest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD2F1FC71F95C0E600989043 /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD2F1FC81F96374A00989043 /* MyMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapView.swift; sourceTree = "<group>"; };
 		BD44B1D01F1F5268008324C2 /* Hitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD44B1D31F1F5268008324C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD44B1D51F1F5268008324C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +80,8 @@
 		BD8514C01F8E2F0F00DA4971 /* StartingButtonLightPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StartingButtonLightPressed.png; sourceTree = "<group>"; };
 		BD8514C11F8E2F0F00DA4971 /* StartingButtonLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StartingButtonLight.png; sourceTree = "<group>"; };
 		BD8514C41F8E2FC800DA4971 /* textbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textbg.png; sourceTree = "<group>"; };
+		BD8514C61F91A12B00DA4971 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BD8514CB1F91A24300DA4971 /* HitchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitchManager.swift; sourceTree = "<group>"; };
 		BDAB00CC1F8CE11900CBDEF8 /* StartingButtonDarkPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StartingButtonDarkPressed.png; sourceTree = "<group>"; };
 		BDAB00CE1F8CE11A00CBDEF8 /* Window-Light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Window-Light.png"; sourceTree = "<group>"; };
 		BDAB00CF1F8CE11A00CBDEF8 /* Button-Light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button-Light.png"; sourceTree = "<group>"; };
@@ -76,7 +93,7 @@
 		BDAB00D61F8CE11E00CBDEF8 /* Button-Dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button-Dark.png"; sourceTree = "<group>"; };
 		BDAB00D71F8CE6B900CBDEF8 /* LargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
 		CBD1AAC53FBF28FEB3E7D873 /* Pods-Hitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hitch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hitch/Pods-Hitch.release.xcconfig"; sourceTree = "<group>"; };
-		DE07EE5180C4CB9D3FA9B7AA /* libPods-Hitch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hitch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D17A6AB807EE81CF822FF52D /* Pods_Hitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +101,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				386520B5D9752DD463758155 /* libPods-Hitch.a in Frameworks */,
+				BD2F1FC61F95C0E600989043 /* Reachability.framework in Frameworks */,
+				BD2F1FC41F95C0E200989043 /* ASIHTTPRequest.framework in Frameworks */,
+				BD2F1FC11F93126200989043 /* SDWebImage.framework in Frameworks */,
+				BD2F1FBF1F93125F00989043 /* ChameleonFramework.framework in Frameworks */,
+				BD2F1FBD1F93125C00989043 /* ButtonProgressBar_iOS.framework in Frameworks */,
+				1C4DC9E76C8EF31EAE24B1F6 /* Pods_Hitch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +125,7 @@
 		BD44B1C71F1F5268008324C2 = {
 			isa = PBXGroup;
 			children = (
+				BD8514C81F91A1AC00DA4971 /* model */,
 				BD44B2011F21CBE2008324C2 /* UI */,
 				BD44B1D21F1F5268008324C2 /* Hitch */,
 				BD44B1D11F1F5268008324C2 /* Products */,
@@ -123,7 +146,9 @@
 			isa = PBXGroup;
 			children = (
 				BD44B1D31F1F5268008324C2 /* AppDelegate.swift */,
+				BD2F1FC81F96374A00989043 /* MyMapView.swift */,
 				BD44B1D51F1F5268008324C2 /* ViewController.swift */,
+				BD8514C61F91A12B00DA4971 /* LoginViewController.swift */,
 				BD44B1DA1F1F5268008324C2 /* Assets.xcassets */,
 				BD5792DC1F40370700E4AC30 /* contacts_2x.png */,
 				BD5792DD1F40370700E4AC30 /* mostviewed_2x.png */,
@@ -134,8 +159,6 @@
 				BD44B1DC1F1F5268008324C2 /* LaunchScreen.storyboard */,
 				BD44B1DF1F1F5268008324C2 /* Info.plist */,
 				BD44B1EB1F209728008324C2 /* Hitch-Bridging-Header.h */,
-				71BEEB771F3EEB5C000C0F15 /* User.swift */,
-				71BEEB791F3EEBC4000C0F15 /* Event.swift */,
 			);
 			path = Hitch;
 			sourceTree = "<group>";
@@ -143,9 +166,14 @@
 		BD44B1E51F1F52EA008324C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD2F1FC71F95C0E600989043 /* Reachability.framework */,
+				BD2F1FC51F95C0E200989043 /* ASIHTTPRequest.framework */,
+				BD2F1FC21F93126200989043 /* SDWebImage.framework */,
+				BD2F1FC01F93125F00989043 /* ChameleonFramework.framework */,
+				BD2F1FBE1F93125C00989043 /* ButtonProgressBar_iOS.framework */,
 				BD44B1E81F1F52FB008324C2 /* AMapFoundationKit.framework */,
 				BD44B1E61F1F52EA008324C2 /* MAMapKit.framework */,
-				DE07EE5180C4CB9D3FA9B7AA /* libPods-Hitch.a */,
+				D17A6AB807EE81CF822FF52D /* Pods_Hitch.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -172,6 +200,16 @@
 				BD8514C41F8E2FC800DA4971 /* textbg.png */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		BD8514C81F91A1AC00DA4971 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				71BEEB771F3EEB5C000C0F15 /* User.swift */,
+				71BEEB791F3EEBC4000C0F15 /* Event.swift */,
+				BD8514CB1F91A24300DA4971 /* HitchManager.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,10 +357,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD2F1FC31F93129400989043 /* Hitch-Bridging-Header.h in Sources */,
+				BD8514CC1F91A24300DA4971 /* HitchManager.swift in Sources */,
+				BD8514C71F91A12B00DA4971 /* LoginViewController.swift in Sources */,
 				BD44B1D61F1F5268008324C2 /* ViewController.swift in Sources */,
 				BDAB00D81F8CE6B900CBDEF8 /* LargeButton.swift in Sources */,
 				71BEEB7A1F3EEBC4000C0F15 /* Event.swift in Sources */,
 				BD8514B51F8E1E8200DA4971 /* TimeLineView.swift in Sources */,
+				BD2F1FC91F96374A00989043 /* MyMapView.swift in Sources */,
 				BD44B1D41F1F5268008324C2 /* AppDelegate.swift in Sources */,
 				71BEEB781F3EEB5C000C0F15 /* User.swift in Sources */,
 			);
