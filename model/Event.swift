@@ -12,6 +12,7 @@ class Event: NSObject {
     var id:Int!
     var name:String!
     var info:String!
+    var createDate: Date!
     var time:Date!
     private var photoCache:UIImage? = nil
     var photo:UIImage!{
@@ -20,16 +21,16 @@ class Event: NSObject {
                 return cache
             }else{
                 //请求图片
-                return nil
+                return UIImage(named: "defaultBg.png")
             }
         }
         set{
             photoCache = newValue
-            //通知view刷新
-            
+            cell?.photo = newValue
         }
     }
     var location:CLLocation!
     var sponser:[User]!
     var participant:[User]!
+    var cell: EventTableCell?
 }

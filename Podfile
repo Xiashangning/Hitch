@@ -7,4 +7,6 @@ target ‘Hitch’ do
 	pod 'ChameleonFramework/Swift'
 	pod ‘ButtonProgressBar-iOS’
 	pod 'ASIHTTPRequest'
+	pod 'MJRefresh'
+	pod 'FoldingCell'
 end

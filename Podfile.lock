@@ -21,6 +21,8 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - FoldingCell (3.0.0)
+  - MJRefresh (3.1.15)
   - Reachability (3.2)
   - SDWebImage (4.1.2):
     - SDWebImage/Core (= 4.1.2)
@@ -32,6 +34,8 @@ DEPENDENCIES:
   - ASIHTTPRequest
   - ButtonProgressBar-iOS
   - ChameleonFramework/Swift
+  - FoldingCell
+  - MJRefresh
   - SDWebImage
 
 SPEC CHECKSUMS:
@@ -41,9 +45,11 @@ SPEC CHECKSUMS:
   ASIHTTPRequest: ec013992946676b7978dcbde6396d57312d21db4
   ButtonProgressBar-iOS: 41f596a677947c565acd2be029f09892aa1aaf0e
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  FoldingCell: 55e9fcac546acc2c8f110f210af892aa90032160
+  MJRefresh: 9af70f5f9327a2cf87f0fb5929f35fcc2fa638ea
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
 
-PODFILE CHECKSUM: 108e8f4ab4f246f64d82fcbd9e4107b0f73e1df9
+PODFILE CHECKSUM: 5a9aae27f43338f38c15d7d62cd554cf0f87756f
 
 COCOAPODS: 1.2.1

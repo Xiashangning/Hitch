@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>本应用需要获取您的位置以便为您提供最近的活动</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>cn</string>
 	<key>CFBundleExecutable</key>
@@ -22,6 +20,19 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescriptio</key>
+	<string>本应用需要获取您的位置以便为您提供最近的活动</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>本应用需要获取您的位置以便为您提供最近的活动</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SFProDisplay-Bold.otf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -33,19 +44,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescriptio</key>
-	<string>本应用需要获取您的位置以便为您提供最近的活动</string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>SFProDisplay-Bold.otf</string>
 	</array>
 </dict>
 </plist>
