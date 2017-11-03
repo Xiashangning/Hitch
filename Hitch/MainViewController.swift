@@ -19,7 +19,7 @@ class MainViewController: UIViewController, EventViewDelegate {
         super.viewDidLoad()
         photo.setImage(HitchManager.manager.user.photo, for: .normal)
         eventView.delegate = self
-        mode.setImage(UIImage(named: "mostviewed_2x"), for: .selected)
+        mode.setImage(UIImage(named: "list"), for: .selected)
         mode.isSelected = false
     }
     

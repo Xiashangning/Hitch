@@ -194,17 +194,21 @@ class EventView: UIView,MAMapViewDelegate,AMapSearchDelegate, UITableViewDelegat
         let y:CGFloat = 12
         let userSize:CGFloat = 35
         let userView = cell.containerView.viewWithTag(2)!
+        var imageView:UIImageView!
         while x + userSize + 30 <= self.bounds.width{
-            let imageView = UIImageView(image: UIImage(named: "contacts_2x.png"))
+            imageView = UIImageView(image: UIImage(named: "contacts_2x"))
             imageView.contentMode = .scaleAspectFit
             imageView.frame = CGRect(x: x, y: y, width: userSize, height: userSize)
             userView.addSubview(imageView)
             x += userSize + 8
         }
+        imageView.image = UIImage(named: "moreUser")
         
         cell.layer.shadowColor = UIColor.flatGray().cgColor
         cell.layer.shadowOffset = CGSize(width: 4, height: 4)
         cell.layer.shadowRadius = 10
         cell.layer.shadowOpacity = 0.6
+        
+        cell.detail.text = cell.detail.text.replacingOccurrences(of: "\\n", with: "\n")
     }
 }

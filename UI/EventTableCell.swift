@@ -29,6 +29,7 @@ class EventTableCell: FoldingCell {
                 }else{
                     eventPhoto.image = i
                 }
+                themeColor = UIColor(averageColorFrom: i)
             }
         }
     }
@@ -43,6 +44,7 @@ class EventTableCell: FoldingCell {
         }
     }
     var event: Event!
+    var themeColor: UIColor!
     static var cellWidth: CGFloat!
     
     @IBOutlet weak var closedEventHeight: NSLayoutConstraint!
@@ -75,12 +77,16 @@ class EventTableCell: FoldingCell {
     }
     
     @IBAction func wouldLikeRegist(_ sender: Any) {
-        print("1")
-        UIView.animate(withDuration: 0.5, animations: {
-            
-        }) { (flag) in
-            
-        }
+        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: eventPhoto.frame.width, height: eventPhoto.frame.height))
+        titleView.backgroundColor = themeColor
+        titleView.alpha = 0
+        eventPhoto.addSubview(titleView)
+//        UIView.animate(withDuration: 0.5, animations: {
+//            titleView.alpha = 1
+//            self.eventPhoto.frame = CGRect(origin: self.eventPhoto.frame.origin, size: CGSize(width: self.eventPhoto.frame.width, height: 40))
+//        }) { (flag) in
+//            
+//        }
     }
     override func awakeFromNib() {
         super.awakeFromNib()

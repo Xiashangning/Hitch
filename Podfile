@@ -5,7 +5,6 @@ target ‘Hitch’ do
 	pod 'AMapSearch'
 	pod ‘SDWebImage’
 	pod 'ChameleonFramework/Swift'
-	pod ‘ButtonProgressBar-iOS’
 	pod 'ASIHTTPRequest'
 	pod 'MJRefresh'
 	pod 'FoldingCell'
