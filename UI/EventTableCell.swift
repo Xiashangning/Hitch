@@ -17,11 +17,18 @@ class EventTableCell: FoldingCell {
         }
         set{
             if let i = newValue{
-                let viewHieght = eventPhoto.frame.width/i.size.width*i.size.height
-                let offest = Int(viewHieght -  eventPhoto.frame.height)
-                photoHeight.constant += CGFloat(offest)
-                eventPhoto.frame = CGRect(x: eventPhoto.frame.origin.x, y: eventPhoto.frame.origin.y, width: eventPhoto.frame.width, height: photoHeight.constant)
-                eventPhoto.image = i
+                let viewHeight = Int((EventTableCell.cellWidth-16)/i.size.width*i.size.height)
+                photoHeight.constant = CGFloat(viewHeight)
+                eventPhoto.frame = CGRect(x: eventPhoto.frame.origin.x, y: eventPhoto.frame.origin.y, width: EventTableCell.cellWidth-16, height: photoHeight.constant)
+                if eventPhoto.image != nil,let tableView = self.superview as? UITableView {
+                    UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+                        self.eventPhoto.image = i
+                        tableView.beginUpdates()
+                        tableView.endUpdates()
+                    }, completion: nil)
+                }else{
+                    eventPhoto.image = i
+                }
             }
         }
     }
@@ -36,6 +43,7 @@ class EventTableCell: FoldingCell {
         }
     }
     var event: Event!
+    static var cellWidth: CGFloat!
     
     @IBOutlet weak var closedEventHeight: NSLayoutConstraint!
     @IBOutlet weak var openEventHeight: NSLayoutConstraint!
@@ -67,6 +75,7 @@ class EventTableCell: FoldingCell {
     }
     
     @IBAction func wouldLikeRegist(_ sender: Any) {
+        print("1")
         UIView.animate(withDuration: 0.5, animations: {
             
         }) { (flag) in

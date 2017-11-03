@@ -14,6 +14,7 @@ class EventView: UIView,MAMapViewDelegate,AMapSearchDelegate, UITableViewDelegat
     
     var events:[Event]!
     var cellHeights:[CGFloat]!
+    var cellStatus:[Bool]!
     var map: MAMapView!
     var list: UITableView!
     var delegate: EventViewDelegate?
@@ -40,6 +41,8 @@ class EventView: UIView,MAMapViewDelegate,AMapSearchDelegate, UITableViewDelegat
         events.append(e)
         events.append(e)
         cellHeights = Array(repeating: -1,count: events.count)
+        cellStatus = Array(repeating: false,count: events.count)
+        EventTableCell.cellWidth = self.bounds.width
         
         self.map = MAMapView(frame: self.bounds)
         map.delegate = self
@@ -57,7 +60,6 @@ class EventView: UIView,MAMapViewDelegate,AMapSearchDelegate, UITableViewDelegat
         list.delegate = self
         list.tableFooterView = UIView()
         list.separatorInset = UIEdgeInsets(top: 0, left: UIScreen.main.bounds.width, bottom: 0, right: 0)
-//        list.autoresizingMask = UIViewAutoresizing(rawValue: UIViewAutoresizing.flexibleHeight.rawValue | UIViewAutoresizing.flexibleWidth.rawValue)
 //        list.backgroundView = map
         
         self.addSubview(list)
@@ -94,7 +96,7 @@ class EventView: UIView,MAMapViewDelegate,AMapSearchDelegate, UITableViewDelegat
         cell.backgroundColor = .clear
         initCell(cell,row :indexPath.row, allContents: true)
         
-        if cellHeights[indexPath.row] == cell.openHeight {
+        if cellStatus[indexPath.row] {
             cell.unfold(true, animated: false)
         } else {
             cell.unfold(false, animated: false)
@@ -125,12 +127,14 @@ class EventView: UIView,MAMapViewDelegate,AMapSearchDelegate, UITableViewDelegat
             return
         }
         var duration = 0.0
-        if cellHeights[indexPath.row] == cell.openHeight {
+        if cellStatus[indexPath.row] {
             cellHeights[indexPath.row] = cell.closedHeight
+            cellStatus[indexPath.row] = false
             cell.unfold(false, animated: true)
             duration = 0.8
         } else {
             cellHeights[indexPath.row] = cell.openHeight
+            cellStatus[indexPath.row] = true
             cell.unfold(true, animated: true)
             duration = 0.5
         }
@@ -144,37 +148,63 @@ class EventView: UIView,MAMapViewDelegate,AMapSearchDelegate, UITableViewDelegat
     private func initCell(_ cell: EventTableCell, row: Int, allContents: Bool){
         cell.event = events[row]
         cell.event.cell = cell
-        let rate = self.bounds.width / cell.frame.width
-        cell.frame = CGRect(x: cell.frame.origin.x, y: cell.frame.origin.y, width: self.bounds.width, height: cell.frame.height * rate)
-        cell.photo = UIImage(named: "defaultBg.png")
+        cell.autoresizingMask = UIViewAutoresizing(rawValue: UIViewAutoresizing.flexibleHeight.rawValue | UIViewAutoresizing.flexibleWidth.rawValue)
+        cell.eventPhoto.image = nil
+        cell.photo = cell.event.photo
         
         if !allContents{
             return
         }
-        //边框
-        let top = UIBezierPath(roundedRect: cell.eventPhoto.bounds, byRoundingCorners: UIRectCorner(rawValue: UIRectCorner.topLeft.rawValue | UIRectCorner.topRight.rawValue), cornerRadii: CGSize(width: 10, height: 10))
-        let lt = CAShapeLayer()
-        lt.frame = cell.eventPhoto.bounds
-        lt.path = top.cgPath
-        cell.eventPhoto.layer.mask = lt
+//        //边框
+//        let top = UIBezierPath(roundedRect: cell.eventPhoto.bounds, byRoundingCorners: UIRectCorner(rawValue: UIRectCorner.topLeft.rawValue | UIRectCorner.topRight.rawValue), cornerRadii: CGSize(width: 10, height: 10))
+//        let lt = CAShapeLayer()
+//        lt.frame = cell.eventPhoto.bounds
+//        lt.path = top.cgPath
+//        cell.eventPhoto.layer.mask = lt
+//
+//        let bottom = UIBezierPath(roundedRect: cell.foregroundView.bounds, byRoundingCorners: UIRectCorner(rawValue: UIRectCorner.bottomLeft.rawValue | UIRectCorner.bottomRight.rawValue), cornerRadii: CGSize(width: 10, height: 10))
+//        let lb = CAShapeLayer()
+//        lb.frame = cell.foregroundView.bounds
+//        lb.path = bottom.cgPath
+//        cell.foregroundView.layer.mask = lb
+//
+//        let bc = UIBezierPath(roundedRect: cell.containerView.bounds, byRoundingCorners: UIRectCorner(rawValue: UIRectCorner.bottomLeft.rawValue | UIRectCorner.bottomRight.rawValue), cornerRadii: CGSize(width: 10, height: 10))
+//        let b = CAShapeLayer()
+//        b.frame = cell.containerView.bounds
+//        b.path = bc.cgPath
+//        cell.containerView.layer.mask = b
         
-        let bottom = UIBezierPath(roundedRect: cell.foregroundView.bounds, byRoundingCorners: UIRectCorner(rawValue: UIRectCorner.bottomLeft.rawValue | UIRectCorner.bottomRight.rawValue), cornerRadii: CGSize(width: 10, height: 10))
-        let lb = CAShapeLayer()
-        lb.frame = cell.foregroundView.bounds
-        lb.path = bottom.cgPath
-        cell.foregroundView.layer.mask = lb
+        cellHeights[row] = cellStatus[row] ? cell.openHeight : cell.closedHeight
         
-        let bc = UIBezierPath(roundedRect: cell.containerView.bounds, byRoundingCorners: UIRectCorner(rawValue: UIRectCorner.bottomLeft.rawValue | UIRectCorner.bottomRight.rawValue), cornerRadii: CGSize(width: 10, height: 10))
-        let b = CAShapeLayer()
-        b.frame = cell.containerView.bounds
-        b.path = bc.cgPath
-        cell.containerView.layer.mask = b
-        
-        //颜色
+        //closed
         let themeColor = UIColor(averageColorFrom: cell.photo).flatten()
         cell.foregroundView.backgroundColor = themeColor
-        let view = cell.foregroundView as! EventTimeView
-        view.percentage = 0.43
-        view.pastColor = themeColor?.lighten(byPercentage: 0.2)
+        let foreground = cell.foregroundView as! EventTimeView
+        foreground.percentage = 0.43
+        foreground.pastColor = themeColor?.lighten(byPercentage: 0.2)
+        let basicFontColor = UIColor(contrastingBlackOrWhiteColorOn: themeColor, isFlat: true)!
+        cell.dateClosed.textColor = basicFontColor
+        cell.timeClosed.textColor = basicFontColor
+        cell.statusClosed.textColor = basicFontColor
+        cell.title.textColor = basicFontColor
+        cell.info.textColor = basicFontColor
+        
+        //open
+        var x:CGFloat = 113
+        let y:CGFloat = 12
+        let userSize:CGFloat = 35
+        let userView = cell.containerView.viewWithTag(2)!
+        while x + userSize + 30 <= self.bounds.width{
+            let imageView = UIImageView(image: UIImage(named: "contacts_2x.png"))
+            imageView.contentMode = .scaleAspectFit
+            imageView.frame = CGRect(x: x, y: y, width: userSize, height: userSize)
+            userView.addSubview(imageView)
+            x += userSize + 8
+        }
+        
+        cell.layer.shadowColor = UIColor.flatGray().cgColor
+        cell.layer.shadowOffset = CGSize(width: 4, height: 4)
+        cell.layer.shadowRadius = 10
+        cell.layer.shadowOpacity = 0.6
     }
 }
