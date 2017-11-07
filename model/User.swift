@@ -22,7 +22,7 @@ class User {
                 return cache
             }else{
                 //请求图片
-                return UIImage(named: "contacts_2x.png")
+                return UIImage(named: "defaultUser")
             }
         }
         set{

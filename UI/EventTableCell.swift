@@ -8,6 +8,8 @@
 
 import UIKit
 import FoldingCell
+import Spring
+import ChainableAnimations
 
 class EventTableCell: FoldingCell {
     
@@ -29,7 +31,7 @@ class EventTableCell: FoldingCell {
                 }else{
                     eventPhoto.image = i
                 }
-                themeColor = UIColor(averageColorFrom: i)
+                themeColor = UIColor(averageColorFrom: i).flatten()
             }
         }
     }
@@ -69,24 +71,75 @@ class EventTableCell: FoldingCell {
     
     @IBOutlet weak var eventPhoto: UIImageView!
     
-    @IBOutlet weak var regist: LargeButton!
+    @IBOutlet weak var regist: ImageButton!
     @IBOutlet weak var address: UILabel!
     
     override func commonInit() {
         super.commonInit()
+        eventPhoto.layer.masksToBounds = true
+        containerView.layer.masksToBounds = true
     }
     
     @IBAction func wouldLikeRegist(_ sender: Any) {
-        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: eventPhoto.frame.width, height: eventPhoto.frame.height))
-        titleView.backgroundColor = themeColor
+        let titleView = UIView(frame: eventPhoto.frame)
+        let color = self.themeColor.darken(byPercentage: 0.1)
+        titleView.backgroundColor = color
         titleView.alpha = 0
-        eventPhoto.addSubview(titleView)
-//        UIView.animate(withDuration: 0.5, animations: {
-//            titleView.alpha = 1
-//            self.eventPhoto.frame = CGRect(origin: self.eventPhoto.frame.origin, size: CGSize(width: self.eventPhoto.frame.width, height: 40))
-//        }) { (flag) in
-//            
-//        }
+        let photoView = UIImageView(image: eventPhoto.image)
+        photoView.frame = eventPhoto.frame
+        photoView.contentMode = .scaleAspectFill
+        photoView.layer.masksToBounds = true
+        self.contentView.addSubview(photoView)
+        self.contentView.addSubview(titleView)
+
+        let restFrame = CGRect(x: 0, y: 0, width: containerView.frame.width, height: containerView.frame.height - containerView.viewWithTag(3)!.frame.height)
+        let restView = UIImageView(image: containerView.pb_takeSnapshot(restFrame))
+        restView.frame = containerView.convert(restFrame, to: self.contentView)
+        restView.contentMode = .top
+        restView.layer.masksToBounds = true
+        self.contentView.addSubview(restView)
+        let animatedView = self.animationItemViews?.last?.subviews.first(where: { (view) -> Bool in
+            if case _ as UIImageView = view{
+                return true
+            }else{
+                return false
+            }
+        }) as! UIImageView
+        let buttonView = UIImageView(image: animatedView.image)
+        buttonView.frame = animatedView.convert(animatedView.frame, to: self.contentView)
+        buttonView.contentMode = .top
+        buttonView.layer.masksToBounds = true
+        self.contentView.addSubview(buttonView)
+        
+        let t = UILabel()
+        t.text = self.title.text
+        t.textColor = title.textColor
+        t.font = title.font.withSize(17)
+        t.alpha = 0
+        t.sizeToFit()
+        titleView.addSubview(t)
+        t.center = CGPoint(x: titleView.center.x,y: 20)
+        
+        //start animate
+        self.eventPhoto.isHidden = true
+        self.containerView.isHidden = true
+        self.foregroundView.isHidden = true
+        let destinationY = Float(eventPhoto.frame.origin.y + 40)
+        //image part
+        ChainableAnimator(view: titleView).move(height: 16).anchor(.top).easeOutCubic.thenAfter(t: 0.4).make(alpha: 1).make(height: 40).anchor(.top).easeInCubic.animate(t: 0.8)
+        ChainableAnimator(view: photoView).move(height: 16).anchor(.top).easeOutCubic.thenAfter(t: 0.4).make(height: 40).anchor(.top).easeInCubic.animate(t: 0.8) {
+            photoView.removeFromSuperview()
+        }
+        ChainableAnimator(view: t).make(alpha: 1).easeInExpo.delay(t: 0.4).animate(t: 0.8)
+        //view part
+        ChainableAnimator(view: restView).move(y: 16).easeOutCubic.thenAfter(t: 0.4).make(y: destinationY).make(height: 0).anchor(.top).easeInCubic.animate(t: 0.8){
+            restView.removeFromSuperview()
+        }
+        ChainableAnimator(view: buttonView).move(y: 16).easeOutCubic.thenAfter(t: 0.4).make(y: destinationY).move(height: -20).anchor(.top).easeInCubic.animate(t: 0.8) {
+            
+        }
+        
+        
     }
     override func awakeFromNib() {
         super.awakeFromNib()

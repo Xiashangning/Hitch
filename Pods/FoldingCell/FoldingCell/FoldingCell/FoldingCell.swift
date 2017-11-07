@@ -41,7 +41,7 @@ open class FoldingCell: UITableViewCell {
   /// The color of the back cell
   @IBInspectable open var backViewColor: UIColor = UIColor.brown
   
-  var animationItemViews: [RotatedView]?
+  public var animationItemViews: [RotatedView]?
   
   /**
    Folding animation types
@@ -367,6 +367,7 @@ open class FoldingCell: UITableViewCell {
     DispatchQueue.main.asyncAfter(deadline: .now() + delay) { 
       self.animationView?.alpha = 0
       self.containerView.alpha  = 1
+      self.contentView.bringSubview(toFront: self.containerView)
       completion?()
     }
   }
@@ -408,6 +409,7 @@ open class FoldingCell: UITableViewCell {
     }
     DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: {
       self.animationView?.alpha = 0
+      self.contentView.bringSubview(toFront: self.foregroundView)
       completion?()
     })
     
@@ -504,7 +506,7 @@ extension RotatedView: CAAnimationDelegate {
   
 }
 
-private extension UIView {
+public extension UIView {
   
   func pb_takeSnapshot(_ frame: CGRect) -> UIImage? {
     UIGraphicsBeginImageContextWithOptions(frame.size, false, 0)

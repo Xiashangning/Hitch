@@ -9,10 +9,11 @@
 import UIKit
 import FoldingCell
 import ChameleonFramework
+import MJRefresh
 
 class EventView: UIView,MAMapViewDelegate,AMapSearchDelegate, UITableViewDelegate, UITableViewDataSource {
     
-    var events:[Event]!
+    var events:[Event]! = []
     var cellHeights:[CGFloat]!
     var cellStatus:[Bool]!
     var map: MAMapView!
@@ -32,16 +33,6 @@ class EventView: UIView,MAMapViewDelegate,AMapSearchDelegate, UITableViewDelegat
     }
     
     func myinit(){
-        events = []
-        let e = Event()
-        events.append(e)
-        events.append(e)
-        events.append(e)
-        events.append(e)
-        events.append(e)
-        events.append(e)
-        cellHeights = Array(repeating: -1,count: events.count)
-        cellStatus = Array(repeating: false,count: events.count)
         EventTableCell.cellWidth = self.bounds.width
         
         self.map = MAMapView(frame: self.bounds)
@@ -55,6 +46,12 @@ class EventView: UIView,MAMapViewDelegate,AMapSearchDelegate, UITableViewDelegat
 //        self.addSubview(map)
         
         self.list = UITableView(frame: self.bounds, style: .plain)
+//        list.layer.masksToBounds = true
+        list.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(refresh))
+        list.mj_header.beginRefreshing {
+            self.list.reloadData()
+        }
+        list.mj_footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(loadMore))
         list.dataSource = self
         list.register(UINib(nibName: "EventTableCell", bundle: nil), forCellReuseIdentifier: "eventCell")
         list.delegate = self
@@ -196,7 +193,7 @@ class EventView: UIView,MAMapViewDelegate,AMapSearchDelegate, UITableViewDelegat
         let userView = cell.containerView.viewWithTag(2)!
         var imageView:UIImageView!
         while x + userSize + 30 <= self.bounds.width{
-            imageView = UIImageView(image: UIImage(named: "contacts_2x"))
+            imageView = UIImageView(image: UIImage(named: "defaultUser"))
             imageView.contentMode = .scaleAspectFit
             imageView.frame = CGRect(x: x, y: y, width: userSize, height: userSize)
             userView.addSubview(imageView)
@@ -210,5 +207,23 @@ class EventView: UIView,MAMapViewDelegate,AMapSearchDelegate, UITableViewDelegat
         cell.layer.shadowOpacity = 0.6
         
         cell.detail.text = cell.detail.text.replacingOccurrences(of: "\\n", with: "\n")
+    }
+    
+    @objc private func refresh(){
+        let e = Event()
+        events.append(e)
+        events.append(e)
+        events.append(e)
+        events.append(e)
+        events.append(e)
+        events.append(e)
+        cellHeights = Array(repeating: -1,count: events.count)
+        cellStatus = Array(repeating: false,count: events.count)
+        list.mj_header.endRefreshing()
+    }
+    
+    @objc private func loadMore(){
+//        list.mj_footer.endRefreshing()
+        list.mj_footer.endRefreshingWithNoMoreData()
     }
 }

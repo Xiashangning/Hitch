@@ -1,4 +1,4 @@
-platform :ios, ‘8.0’
+platform :ios, ‘9.0’
 use_frameworks!
 target ‘Hitch’ do
 	pod 'AMap3DMap'
@@ -8,4 +8,6 @@ target ‘Hitch’ do
 	pod 'ASIHTTPRequest'
 	pod 'MJRefresh'
 	pod 'FoldingCell'
+	pod 'Spring'
+	pod 'ChainableAnimations'
 end

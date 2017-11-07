@@ -10,9 +10,11 @@ import UIKit
 
 class LoginViewController: UIViewController,UITextFieldDelegate {
 
+    @IBOutlet weak var visit: UIButton!
+    @IBOutlet weak var regist: UIButton!
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var loginButton: LargeButton!
+    @IBOutlet weak var loginButton: ImageButton!
     private let waiting = UIActivityIndicatorView(activityIndicatorStyle: .white)
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +28,11 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         username.resignFirstResponder()
         password.resignFirstResponder()
     }
-    @IBAction func login(_ sender: LargeButton) {
+    @IBAction func login(_ sender: ImageButton) {
         waiting.startAnimating()
         loginButton.isEnabled = false
+        visit.isEnabled = false
+        regist.isEnabled = false
         if username.text != "" && password.text != ""{
             let (result,description) = User.login(name: username.text!, password: password.text!)
             if result{
@@ -38,6 +42,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                 ac.addAction(UIAlertAction(title: "好的", style: .default, handler: nil))
                 self.present(ac, animated: true, completion: nil)
                 loginButton.isEnabled = true
+                visit.isEnabled = true
+                regist.isEnabled = true
                 waiting.stopAnimating()
             }
         }else{
@@ -45,6 +51,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
             ac.addAction(UIAlertAction(title: "好的", style: .default, handler: nil))
             self.present(ac, animated: true, completion: nil)
             loginButton.isEnabled = true
+            visit.isEnabled = true
+            regist.isEnabled = true
             waiting.stopAnimating()
         }
     }
@@ -53,7 +61,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         let u = User()
         u.id = -1
         u.name = "游客"
-        u.photo = UIImage(named: "contacts_2x.png")
+        u.photo = UIImage(named: "defaultUser")
         HitchManager.manager.user = u
         self.performSegue(withIdentifier: "next", sender: self)
     }
