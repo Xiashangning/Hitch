@@ -22,12 +22,12 @@ PODS:
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
   - FoldingCell (3.0.0)
+  - IBAnimatable (5.0.0)
   - MJRefresh (3.1.15)
   - Reachability (3.2)
   - SDWebImage (4.2.1):
     - SDWebImage/Core (= 4.2.1)
   - SDWebImage/Core (4.2.1)
-  - Spring (1.0.3)
 
 DEPENDENCIES:
   - AMap3DMap
@@ -36,9 +36,9 @@ DEPENDENCIES:
   - ChainableAnimations
   - ChameleonFramework/Swift
   - FoldingCell
+  - IBAnimatable
   - MJRefresh
   - SDWebImage
-  - Spring
 
 SPEC CHECKSUMS:
   AMap3DMap: 3eb906ac6b9d488413ab26c24f67eca4b4ad4641
@@ -48,11 +48,11 @@ SPEC CHECKSUMS:
   ChainableAnimations: 12e0a88e72fb554ad4cda38c40474e4d65c972a2
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   FoldingCell: 55e9fcac546acc2c8f110f210af892aa90032160
+  IBAnimatable: aa2286a9cf8fb4ae2e1be85c5287ae56143b024f
   MJRefresh: 9af70f5f9327a2cf87f0fb5929f35fcc2fa638ea
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: 1fa4c9edf525b744f002db89f3f5a38b3cd4c541
-  Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
 
-PODFILE CHECKSUM: 25432da1b2cc46b9ddcbed5a36aa251d85de73d4
+PODFILE CHECKSUM: 095236abce1305e7b9709a6f7a71b44ddfe6f2e8
 
 COCOAPODS: 1.2.1

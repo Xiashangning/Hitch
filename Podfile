@@ -8,6 +8,6 @@ target ‘Hitch’ do
 	pod 'ASIHTTPRequest'
 	pod 'MJRefresh'
 	pod 'FoldingCell'
-	pod 'Spring'
+	pod 'IBAnimatable'
 	pod 'ChainableAnimations'
 end

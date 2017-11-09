@@ -9,13 +9,6 @@
 import Foundation
 import UIKit
 
-internal extension Float {
-    
-    var toCG: CGFloat {
-        return CGFloat(self)
-    }
-}
-
 
 public final class ChainableAnimator {
     
@@ -72,43 +65,43 @@ public extension ChainableAnimator {
         return self
     }
     
-    public func make(height: Float, width: Float) -> Self {
-        animator.makeSize()(height.toCG, width.toCG)
+    public func make(height: CGFloat, width: CGFloat) -> Self {
+        animator.makeSize()(height, width)
         return self
     }
     
-    public func makeOrigin(x: Float, y: Float) -> Self {
-        animator.makeOrigin()(x.toCG, y.toCG)
+    public func makeOrigin(x: CGFloat, y: CGFloat) -> Self {
+        animator.makeOrigin()(x, y)
         return self
     }
     
-    public func makeCenter(x: Float, y: Float) -> Self {
-        animator.makeCenter()(x.toCG, y.toCG)
+    public func makeCenter(x: CGFloat, y: CGFloat) -> Self {
+        animator.makeCenter()(x, y)
         return self
     }
     
-    public func make(x: Float) -> Self {
-        animator.makeX()(x.toCG)
+    public func make(x: CGFloat) -> Self {
+        animator.makeX()(x)
         return self
     }
     
-    public func make(y: Float) -> Self {
-        animator.makeY()(y.toCG)
+    public func make(y: CGFloat) -> Self {
+        animator.makeY()(y)
         return self
     }
     
-    public func make(width: Float) -> Self {
-        animator.makeWidth()(width.toCG)
+    public func make(width: CGFloat) -> Self {
+        animator.makeWidth()(width)
         return self
     }
     
-    public func make(height: Float) -> Self {
-        animator.makeHeight()(height.toCG)
+    public func make(height: CGFloat) -> Self {
+        animator.makeHeight()(height)
         return self
     }
     
-    public func make(alpha: Float) -> Self {
-        animator.makeOpacity()(alpha.toCG)
+    public func make(alpha: CGFloat) -> Self {
+        animator.makeOpacity()(alpha)
         return self
     }
     
@@ -122,63 +115,63 @@ public extension ChainableAnimator {
         return self
     }
     
-    public func make(borderWidth width: Float) -> Self {
-        animator.makeBorderWidth()(width.toCG)
+    public func make(borderWidth width: CGFloat) -> Self {
+        animator.makeBorderWidth()(width)
         return self
     }
     
-    public func make(cornerRadius: Float) -> Self {
-        animator.makeCornerRadius()(cornerRadius.toCG)
+    public func make(cornerRadius: CGFloat) -> Self {
+        animator.makeCornerRadius()(cornerRadius)
         return self
     }
     
-    public func make(scale: Float) -> Self {
-        animator.makeScale()(scale.toCG)
+    public func make(scale: CGFloat) -> Self {
+        animator.makeScale()(scale)
         return self
     }
     
-    public func make(scaleY: Float) -> Self {
-        animator.makeScaleY()(scaleY.toCG)
+    public func make(scaleY: CGFloat) -> Self {
+        animator.makeScaleY()(scaleY)
         return self
     }
     
-    public func make(scaleX: Float) -> Self {
-        animator.makeScaleX()(scaleX.toCG)
+    public func make(scaleX: CGFloat) -> Self {
+        animator.makeScaleX()(scaleX)
         return self
     }
     
-    public func makeAnchor(x: Float, y: Float) -> Self {
-        animator.makeAnchor()(x.toCG, y.toCG)
+    public func makeAnchor(x: CGFloat, y: CGFloat) -> Self {
+        animator.makeAnchor()(x, y)
         return self
     }
     
-    public func move(x: Float) -> Self {
-        animator.moveX()(x.toCG)
+    public func move(x: CGFloat) -> Self {
+        animator.moveX()(x)
         return self
     }
     
-    public func move(y: Float) -> Self {
-        animator.moveY()(y.toCG)
+    public func move(y: CGFloat) -> Self {
+        animator.moveY()(y)
         return self
     }
     
-    public func move(x: Float, y: Float) -> Self {
-        animator.moveXY()(x.toCG, y.toCG)
+    public func move(x: CGFloat, y: CGFloat) -> Self {
+        animator.moveXY()(x, y)
         return self
     }
     
-    public func move(width: Float) -> Self {
-        animator.moveWidth()(width.toCG)
+    public func move(width: CGFloat) -> Self {
+        animator.moveWidth()(width)
         return self
     }
     
-    public func move(height: Float) -> Self {
-        animator.moveHeight()(height.toCG)
+    public func move(height: CGFloat) -> Self {
+        animator.moveHeight()(height)
         return self
     }
     
-    public func movePolar(radius: Float, angle: Float) -> Self {
-        animator.movePolar()(radius.toCG, angle.toCG)
+    public func movePolar(radius: CGFloat, angle: CGFloat) -> Self {
+        animator.movePolar()(radius, angle)
         return self
     }
     
@@ -187,53 +180,53 @@ public extension ChainableAnimator {
         return self
     }
     
-    public func rotate(angle: Float) -> Self {
-        animator.rotate()(angle.toCG)
+    public func rotate(angle: CGFloat) -> Self {
+        animator.rotate()(angle)
         return self
     }
     
-    public func rotateX(angle: Float) -> Self {
-        animator.rotateX()(angle.toCG)
+    public func rotateX(angle: CGFloat) -> Self {
+        animator.rotateX()(angle)
         return self
     }
     
-    public func rotateY(angle: Float) -> Self {
-        animator.rotateY()(angle.toCG)
+    public func rotateY(angle: CGFloat) -> Self {
+        animator.rotateY()(angle)
         return self
     }
     
-    public func rotateZ(angle: Float) -> Self {
-        animator.rotateZ()(angle.toCG)
+    public func rotateZ(angle: CGFloat) -> Self {
+        animator.rotateZ()(angle)
         return self
     }
     
-    public func transform(x: Float) -> Self {
-        animator.transformX()(x.toCG)
+    public func transform(x: CGFloat) -> Self {
+        animator.transformX()(x)
         return self
     }
     
-    public func transform(y: Float) -> Self {
-        animator.transformY()(y.toCG)
+    public func transform(y: CGFloat) -> Self {
+        animator.transformY()(y)
         return self
     }
     
-    public func transform(x: Float, y: Float) -> Self {
-        animator.transformXY()(x.toCG, y.toCG)
+    public func transform(x: CGFloat, y: CGFloat) -> Self {
+        animator.transformXY()(x, y)
         return self
     }
     
-    public func transform(scale: Float) -> Self {
-        animator.transformScale()(scale.toCG)
+    public func transform(scale: CGFloat) -> Self {
+        animator.transformScale()(scale)
         return self
     }
     
-    public func transform(scaleX: Float) -> Self {
-        animator.transformScaleX()(scaleX.toCG)
+    public func transform(scaleX: CGFloat) -> Self {
+        animator.transformScaleX()(scaleX)
         return self
     }
     
-    public func transform(scaleY: Float) -> Self {
-        animator.transformScaleY()(scaleY.toCG)
+    public func transform(scaleY: CGFloat) -> Self {
+        animator.transformScaleY()(scaleY)
         return self
     }
     

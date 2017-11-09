@@ -21,6 +21,7 @@
 		BD44B1D61F1F5268008324C2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44B1D51F1F5268008324C2 /* MainViewController.swift */; };
 		BD44B1DB1F1F5268008324C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD44B1DA1F1F5268008324C2 /* Assets.xcassets */; };
 		BD44B1DE1F1F5268008324C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD44B1DC1F1F5268008324C2 /* LaunchScreen.storyboard */; };
+		BD56CAD41FB29B9F00C5A09D /* IBAnimatable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD56CAD51FB29B9F00C5A09D /* IBAnimatable.framework */; };
 		BD5792D11F402BF100E4AC30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD5792CF1F402BF100E4AC30 /* Main.storyboard */; };
 		BD5792E21F40370700E4AC30 /* compose_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5792DE1F40370700E4AC30 /* compose_2x.png */; };
 		BD5792F71F41752F00E4AC30 /* IconBlank.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5792F61F41752F00E4AC30 /* IconBlank.png */; };
@@ -51,7 +52,6 @@
 		BDB583411FAF541A00E59236 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = BDB583401FAF541A00E59236 /* list.png */; };
 		BDB583431FAF541E00E59236 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = BDB583421FAF541E00E59236 /* map.png */; };
 		BDB583471FAF577C00E59236 /* defaultUser.png in Resources */ = {isa = PBXBuildFile; fileRef = BDB583461FAF577C00E59236 /* defaultUser.png */; };
-		BDB5834D1FB051A500E59236 /* Spring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB5834E1FB051A500E59236 /* Spring.framework */; };
 		BDB583691FB1D73B00E59236 /* ChainableAnimations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB5836A1FB1D73B00E59236 /* ChainableAnimations.framework */; };
 		BDBDE45A1FACB84600C2485D /* moreUser.png in Resources */ = {isa = PBXBuildFile; fileRef = BDBDE4591FACB84600C2485D /* moreUser.png */; };
 /* End PBXBuildFile section */
@@ -76,6 +76,7 @@
 		BD44B1E61F1F52EA008324C2 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAMapKit.framework; path = ../../Downloads/MAMapKit.framework; sourceTree = "<group>"; };
 		BD44B1E81F1F52FB008324C2 /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapFoundationKit.framework; path = ../../Downloads/AMapFoundationKit.framework; sourceTree = "<group>"; };
 		BD44B1EB1F209728008324C2 /* Hitch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hitch-Bridging-Header.h"; sourceTree = "<group>"; };
+		BD56CAD51FB29B9F00C5A09D /* IBAnimatable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IBAnimatable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD5792D01F402BF100E4AC30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD5792DE1F40370700E4AC30 /* compose_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compose_2x.png; sourceTree = "<group>"; };
 		BD5792F61F41752F00E4AC30 /* IconBlank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconBlank.png; sourceTree = "<group>"; };
@@ -123,8 +124,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD56CAD41FB29B9F00C5A09D /* IBAnimatable.framework in Frameworks */,
 				BDB583691FB1D73B00E59236 /* ChainableAnimations.framework in Frameworks */,
-				BDB5834D1FB051A500E59236 /* Spring.framework in Frameworks */,
 				BDA15D031F9761E80038124C /* MJRefresh.framework in Frameworks */,
 				BDA15D011F9761E50038124C /* FoldingCell.framework in Frameworks */,
 				BD2F1FC61F95C0E600989043 /* Reachability.framework in Frameworks */,
@@ -185,6 +186,7 @@
 		BD44B1E51F1F52EA008324C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD56CAD51FB29B9F00C5A09D /* IBAnimatable.framework */,
 				BDB5836A1FB1D73B00E59236 /* ChainableAnimations.framework */,
 				BDB583681FB0835000E59236 /* JHChainableAnimations.framework */,
 				BDB583661FB0544F00E59236 /* DKChainableAnimationKit.framework */,

@@ -10,6 +10,7 @@ import UIKit
 import FoldingCell
 import ChameleonFramework
 import MJRefresh
+import IBAnimatable
 
 class EventView: UIView,MAMapViewDelegate,AMapSearchDelegate, UITableViewDelegate, UITableViewDataSource {
     
@@ -152,24 +153,13 @@ class EventView: UIView,MAMapViewDelegate,AMapSearchDelegate, UITableViewDelegat
         if !allContents{
             return
         }
-//        //边框
-//        let top = UIBezierPath(roundedRect: cell.eventPhoto.bounds, byRoundingCorners: UIRectCorner(rawValue: UIRectCorner.topLeft.rawValue | UIRectCorner.topRight.rawValue), cornerRadii: CGSize(width: 10, height: 10))
-//        let lt = CAShapeLayer()
-//        lt.frame = cell.eventPhoto.bounds
-//        lt.path = top.cgPath
-//        cell.eventPhoto.layer.mask = lt
-//
-//        let bottom = UIBezierPath(roundedRect: cell.foregroundView.bounds, byRoundingCorners: UIRectCorner(rawValue: UIRectCorner.bottomLeft.rawValue | UIRectCorner.bottomRight.rawValue), cornerRadii: CGSize(width: 10, height: 10))
-//        let lb = CAShapeLayer()
-//        lb.frame = cell.foregroundView.bounds
-//        lb.path = bottom.cgPath
-//        cell.foregroundView.layer.mask = lb
-//
-//        let bc = UIBezierPath(roundedRect: cell.containerView.bounds, byRoundingCorners: UIRectCorner(rawValue: UIRectCorner.bottomLeft.rawValue | UIRectCorner.bottomRight.rawValue), cornerRadii: CGSize(width: 10, height: 10))
-//        let b = CAShapeLayer()
-//        b.frame = cell.containerView.bounds
-//        b.path = bc.cgPath
-//        cell.containerView.layer.mask = b
+        //边框
+        cell.eventPhoto.cornerRadius = 10
+        cell.eventPhoto.cornerSides = [.topLeft,.topRight]
+        if case let v as AnimatableView = cell.containerView{
+            v.cornerRadius = 10
+            v.cornerSides = [.bottomLeft,.bottomRight]
+        }
         
         cellHeights[row] = cellStatus[row] ? cell.openHeight : cell.closedHeight
         
