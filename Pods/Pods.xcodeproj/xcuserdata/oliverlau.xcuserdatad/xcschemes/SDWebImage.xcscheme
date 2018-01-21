@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6372982F24E6F0FF266D8DF4BB9CEAF6"
-               BuildableName = "Pods_Hitch.framework"
-               BlueprintName = "Pods-Hitch"
+               BlueprintIdentifier = "2ABCD65B67E219F22A87F6BD9A4FAE93"
+               BuildableName = "SDWebImage.framework"
+               BlueprintName = "SDWebImage"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6372982F24E6F0FF266D8DF4BB9CEAF6"
-            BuildableName = "Pods_Hitch.framework"
-            BlueprintName = "Pods-Hitch"
+            BlueprintIdentifier = "2ABCD65B67E219F22A87F6BD9A4FAE93"
+            BuildableName = "SDWebImage.framework"
+            BlueprintName = "SDWebImage"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

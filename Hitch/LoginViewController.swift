@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+
 
 class LoginViewController: UIViewController,UITextFieldDelegate {
 
@@ -34,18 +36,31 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         visit.isEnabled = false
         regist.isEnabled = false
         if username.text != "" && password.text != ""{
-            let (result,description) = User.login(name: username.text!, password: password.text!)
-            if result{
-                self.performSegue(withIdentifier: "next", sender: self)
-            }else{
-                let ac = UIAlertController(title: "对不起", message: description, preferredStyle: .alert)
-                ac.addAction(UIAlertAction(title: "好的", style: .default, handler: nil))
-                self.present(ac, animated: true, completion: nil)
-                loginButton.isEnabled = true
-                visit.isEnabled = true
-                regist.isEnabled = true
-                waiting.stopAnimating()
-            }
+            let parameters:Parameters = [
+                "username":username.text ?? "",
+                "password":password.text ?? ""
+            ]
+            Alamofire.request("http://172.20.10.3:8000/login.php", method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { response in
+                dump(response)
+                switch(response.result){
+                case .success(let json):
+                    let data = json as! [String:Any]
+                    if(data["code"] as! Int != 200){
+                        let ac = UIAlertController(title: "对不起", message: "用户名和密码not correct", preferredStyle: .alert)
+                        ac.addAction(UIAlertAction(title: "好的", style: .default, handler: nil))
+                        self.present(ac, animated: true, completion: nil)
+                    }else{
+                        UserDefaults.standard.set(data["token"], forKey: "token")
+                        self.performSegue(withIdentifier: "next", sender: self)
+                    }
+                default:
+                    break
+                }
+                self.loginButton.isEnabled = true
+                self.visit.isEnabled = true
+                self.regist.isEnabled = true
+                self.waiting.stopAnimating()
+            })
         }else{
             let ac = UIAlertController(title: "对不起", message: "请输入用户名和密码", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "好的", style: .default, handler: nil))
@@ -63,6 +78,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         u.name = "游客"
         u.photo = UIImage(named: "defaultUser")
         HitchManager.manager.user = u
+        
         self.performSegue(withIdentifier: "next", sender: self)
     }
 

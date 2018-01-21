@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6372982F24E6F0FF266D8DF4BB9CEAF6"
-               BuildableName = "Pods_Hitch.framework"
-               BlueprintName = "Pods-Hitch"
+               BlueprintIdentifier = "FCD5195038FBCEA204D7FDCE922FF4AC"
+               BuildableName = "ASIHTTPRequest.framework"
+               BlueprintName = "ASIHTTPRequest"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6372982F24E6F0FF266D8DF4BB9CEAF6"
-            BuildableName = "Pods_Hitch.framework"
-            BlueprintName = "Pods-Hitch"
+            BlueprintIdentifier = "FCD5195038FBCEA204D7FDCE922FF4AC"
+            BuildableName = "ASIHTTPRequest.framework"
+            BlueprintName = "ASIHTTPRequest"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
